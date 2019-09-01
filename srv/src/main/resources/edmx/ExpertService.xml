@@ -3,15 +3,6 @@
   <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
     <edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
   </edmx:Reference>
-  <edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470974/Common.xml?api=v2" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
-    <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
-  </edmx:Reference>
-  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
-    <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
-  </edmx:Reference>
-  <edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
-    <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
-  </edmx:Reference>
   <edmx:DataServices m:DataServiceVersion="2.0">
     <Schema Namespace="ExpertService" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
       <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
@@ -51,10 +42,6 @@
         <Key>
           <PropertyRef Name="ID"/>
         </Key>
-        <Property Name="modifiedAt" Type="Edm.DateTimeOffset" ConcurrencyMode="Fixed"/>
-        <Property Name="createdAt" Type="Edm.DateTimeOffset"/>
-        <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
-        <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
         <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
         <NavigationProperty Name="expert" Relationship="ExpertService.Team_members_expert" FromRole="Team_members" ToRole="Experts"/>
         <NavigationProperty Name="team" Relationship="ExpertService.Team_members_team" FromRole="Team_members" ToRole="Expert_teams"/>
@@ -135,30 +122,6 @@
             <PropertyValue Property="Updatable" Bool="false"/>
           </Record>
         </Annotation>
-      </Annotations>
-      <Annotations Target="ExpertService.Team_members/modifiedAt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-        <Annotation Term="Common.Label" String="Changed At"/>
-        <Annotation Term="Core.Computed" Bool="true"/>
-        <Annotation Term="Core.Immutable" Bool="true"/>
-        <Annotation Term="UI.HiddenFilter" Bool="true"/>
-      </Annotations>
-      <Annotations Target="ExpertService.Team_members/createdAt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-        <Annotation Term="Common.Label" String="Created At"/>
-        <Annotation Term="Core.Computed" Bool="true"/>
-        <Annotation Term="Core.Immutable" Bool="true"/>
-        <Annotation Term="UI.HiddenFilter" Bool="true"/>
-      </Annotations>
-      <Annotations Target="ExpertService.Team_members/createdBy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-        <Annotation Term="Common.Label" String="Created By"/>
-        <Annotation Term="Core.Computed" Bool="true"/>
-        <Annotation Term="Core.Immutable" Bool="true"/>
-        <Annotation Term="UI.HiddenFilter" Bool="true"/>
-      </Annotations>
-      <Annotations Target="ExpertService.Team_members/modifiedBy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-        <Annotation Term="Common.Label" String="Changed By"/>
-        <Annotation Term="Core.Computed" Bool="true"/>
-        <Annotation Term="Core.Immutable" Bool="true"/>
-        <Annotation Term="UI.HiddenFilter" Bool="true"/>
       </Annotations>
     </Schema>
   </edmx:DataServices>

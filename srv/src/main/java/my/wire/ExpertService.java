@@ -11,29 +11,30 @@ import com.sap.cloud.sdk.service.prov.api.request.*;
 import com.sap.cloud.sdk.service.prov.api.response.*;
 import org.slf4j.*;
 
-public class OrdersService {
+public class ExpertService {
 
-    private static final Logger LOG = CloudLoggerFactory.getLogger(OrdersService.class.getName());
+    private static final Logger LOG = CloudLoggerFactory.getLogger(ExpertService.class.getName());
 
-    @BeforeRead(entity = "Orders", serviceName = "CatalogService")
+    @BeforeRead(entity = "Experts", serviceName = "ExpertService")
     public BeforeReadResponse beforeReadOrders(ReadRequest req, ExtensionHelper h) {
-        LOG.error("##### Orders - beforeReadOrders ########");
+        LOG.error("##### Experts - beforeReadOrders ########");
         return BeforeReadResponse.setSuccess().response();
     }
 
-    @AfterRead(entity = "Orders", serviceName = "CatalogService")
+    @AfterRead(entity = "Experts", serviceName = "ExpertService")
     public ReadResponse afterReadOrders(ReadRequest req, ReadResponseAccessor res, ExtensionHelper h) {
         EntityData ed = res.getEntityData();
-        EntityData ex = EntityData.getBuilder(ed).addElement("amount", 1000).buildEntityData("Orders");
+        //EntityData ex = EntityData.getBuilder(ed).addElement("amount", 1000).buildEntityData("Experts");
+        EntityData ex = EntityData.getBuilder(ed).addElement("ext_id", "external id").buildEntityData("Experts");
         return ReadResponse.setSuccess().setData(ex).response();
     }
 
-    @AfterQuery(entity = "Orders", serviceName = "CatalogService")
+    @AfterQuery(entity = "Experts", serviceName = "ExpertService")
     public QueryResponse afterQueryOrders(QueryRequest req, QueryResponseAccessor res, ExtensionHelper h) {
         List<EntityData> dataList = res.getEntityDataList(); // original list
         List<EntityData> modifiedList = new ArrayList<EntityData>(dataList.size()); // modified list
         for (EntityData ed : dataList) {
-            EntityData ex = EntityData.getBuilder(ed).addElement("amount", 1000).buildEntityData("Orders");
+            EntityData ex = EntityData.getBuilder(ed).addElement("ext_id", "external id").buildEntityData("Experts");
             modifiedList.add(ex);
         }
         return QueryResponse.setSuccess().setData(modifiedList).response();

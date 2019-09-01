@@ -1,4 +1,4 @@
-using { my.wire, sap.common } from '../db/data-model';
+using my.wire from '../db/data-model';
 
 service ExpertService {
   entity Experts @readonly as projection on wire.Experts;

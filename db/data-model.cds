@@ -1,5 +1,4 @@
 namespace my.wire;
-using { User, Country, managed } from '@sap/cds/common';
 
 entity Experts {
   key ID : Integer;
@@ -17,7 +16,7 @@ entity Expert_teams {
   parent_team: Integer;
 }
 
-entity Team_members : managed {
+entity Team_members {
   key ID  : Integer;
   expert  : Association to Experts;
   team : Association to Expert_teams;
