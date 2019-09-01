@@ -55,7 +55,7 @@
         <Property Name="createdAt" Type="Edm.DateTimeOffset"/>
         <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
         <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
-        <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
         <NavigationProperty Name="expert" Relationship="ExpertService.Team_members_expert" FromRole="Team_members" ToRole="Experts"/>
         <NavigationProperty Name="team" Relationship="ExpertService.Team_members_team" FromRole="Team_members" ToRole="Expert_teams"/>
         <Property Name="expert_ID" Type="Edm.Int32"/>

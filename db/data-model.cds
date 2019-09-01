@@ -18,7 +18,7 @@ entity Expert_teams {
 }
 
 entity Team_members : managed {
-  key ID  : UUID;
+  key ID  : Integer;
   expert  : Association to Experts;
   team : Association to Expert_teams;
 }

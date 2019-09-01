@@ -197,7 +197,7 @@
         "ID": {
           "@cds.persistence.name": "ID",
           "key": true,
-          "type": "cds.UUID"
+          "type": "cds.Integer"
         },
         "expert": {
           "@cds.persistence.name": "EXPERT",
@@ -903,7 +903,7 @@
         "ID": {
           "@cds.persistence.name": "ID",
           "key": true,
-          "type": "cds.UUID"
+          "type": "cds.Integer"
         },
         "expert": {
           "@cds.persistence.name": "EXPERT",

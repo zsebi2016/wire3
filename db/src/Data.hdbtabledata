@@ -1,0 +1,38 @@
+{
+	"format_version": 1,
+	"imports": [
+		{
+			"target_table": "MY_WIRE_EXPERTS",
+			"source_data": {
+			"data_type": "CSV",
+				"file_name": "experts.csv",
+				"has_header": true,
+				"type_config": {
+					"delimiter": ";"
+				}
+			}
+		},
+		{
+			"target_table": "MY_WIRE_EXPERT_TEAMS",
+			"source_data": {
+			"data_type": "CSV",
+				"file_name": "expert_teams.csv",
+				"has_header": true,
+				"type_config": {
+					"delimiter": ";"
+				}
+			}
+		},
+		{
+			"target_table": "MY_WIRE_TEAM_MEMBERS",
+			"source_data": {
+			"data_type": "CSV",
+				"file_name": "team_members.csv",
+				"has_header": true,
+				"type_config": {
+					"delimiter": ";"
+				}
+			}
+		}
+	]
+}

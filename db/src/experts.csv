@@ -1,0 +1,222 @@
+ID;REPORTS_TO;SKILL_SET;EXT_ID;NAME
+100001;100001;Application Lifecycle Management;1000000150;Hedy Wey
+100002;100001;Big Data EIM;1000000046;Palmira Steffenson
+100003;100002;Business Intelligence;1000004384;Taunya Ballance
+100004;100003;BW4HANA;1000000016;Arnita Kee
+100005;100004;BYD;1000000045;Evelin France
+100006;100005;C4C;1000000044;Ozell Broyles
+100007;100006;C4TE;1000000043;Teodoro Wiltsie
+100008;100007;CEC;1000004385;Tayna Crimmins
+100009;100008;Core Platform;1000002636;Evita Schmaltz
+100010;100009;CRM;1000000023;Hyon Leon
+100011;100010;Cross Platform Integration;1000000042;Sidney Liggins
+100012;100011;Knowledge about functionality and architecture of the product SAP Customer Checkout;1000000041;Karmen Legree
+100013;100012;DBOS;1000002637;Macy Andrada
+100014;100013;Enterprise Data Management;1000000040;Delaine Roten
+100015;100014;EPM;1000004386;Michale Wooten
+100016;100015;Knowledge about functionality and architecture of the product SAP Event Ticketing;1000004383;Johnetta Tague
+100017;100011;GRC;1000004388;Jeannette Struck
+100018;100009;HANA PLATFORM;1000004434;Dot Mattews
+100019;100003;HCM;1000004740;Zaida Renick
+100020;100013;INDUSTRY SOLUTIONS;1000004382;Lorilee Rasmus
+100021;100008;MDG;1000002729;Delphine Petters
+100022;100004;NW JAVA;1000000079;Jan Richer
+100023;100004;PARTNER SUPPORT;1000000037;Damaris Tuel
+100024;100004;S4HANA Cloud;1000000036;Marivel Madonna
+100025;100006;S4HANA Finance;1000000035;Karena Rivers
+100026;100001;S4HANA PLM MAN;1000000034;Leora Murguia
+100027;100005;S4HANA PROCUREMENT;1000004736;Nicolle Matley
+100028;100001;S4HANA Sales;1000004381;Estell Baudoin
+100029;100002;Knowledge about core functionality and architecture of the SAP Cloud Platform;1000004389;Harriette Arp
+100030;100011;SCM;1000004390;Shaquita Medellin
+100031;100002;SF EC, INT, Analytics;1000004387;Dalton Gullick
+100032;100001;SF LMS, JAM & PLT ;1000000068;Ouida Falcone
+100033;100001;SF Recruiting & ONB;1000000033;Chadwick Stejskal
+100034;100010;SF TALENT;1000003012;Monnie Flory
+100035;100011;Knowledge about functionality and architecture of the product SAP Sports One;1000000032;Long Devane
+100036;100009;SRM;1000000031;Calista Maroon
+100037;100005;Support Portal;1000000030;Iluminada Beyer
+100038;100014;UX;1000002851;Lena Tiggs
+100039;100013;Unix / Linux Architecture, kernel, API and principles of operation�Software development IBM;1000000029;Len Boomer
+100040;100008;AIF Development;1000000028;Maple Senior
+100041;100001;B2B Development;1000002635;Audie Spanbauer
+100042;100003;Interface Development;1000004529;Gianna Hayes
+100043;100009;Generic software engineering and development  tasks based on SAP Development Platforms, mainly on the platforms SAP NetWeaver, SAP HANA and SAP HANA Cloud Platform. Area of activities are front-end, back-end and  interface development. This includes to extend, to integrate and to build up new applications: on premise and in the cloud evironment;1000004526;Lia Fino
+100044;100012;SAP SDI & SAP SDQ development;1000004528;Josue Vandine
+100045;100008;SAP ADP development;1000004525;Cleora Guadalupe
+100046;100013;SAP Migration Cockpit development;1000004527;Garry Mansfield
+100047;100009;Web Enablement;1000004524;Janee Milliron
+100048;100002;UML Software Design SCP SuccessFactors;1000004101;Elois Cupit
+100049;100008;M&A business process architecture, integration, and deployment.;1000004102;Lucy Regan
+100050;100002;Include Day1 company code setup, acquired employee onboarding, operational integreation process setup.;1000004103;Glayds Plumb
+100051;100007;Knowledge and Experience as Agile coach;1000004104;Selena Mitchum
+100052;100004;Operate tasks in agile frameworks like Scrum, Kanban, etc.;1000004105;Evelyn Sickles
+100053;100007;Writing clean-code, refactoring techniques.;1000004106;Clifton Smither
+100054;100006;Asynchronous JavaScript and XML;1000004107;Laureen Picone
+100055;100001;Hardware troubleshooting of Apple Devices inlcuding Macs, iPhones, iPads and Apple TVs;1000004108;Maryanne Rabago
+100056;100010;Business Manager including administration of Volume Purchase Program (VPP) and Device Enrollment Program (DEP) and incident and problem management through AppleCare;1000004109;Chiquita Acree
+100057;100004;Automation for iOS;1000002724;Eugenie Russom
+100058;100001;Automation for macOS;1000002725;Rosalia Distefano
+100059;100008;Operation, Maintenance, and support of SAP Applications;1000002727;Daphne Vierra
+100060;100014;Servers/Infra and applications Monitoring tool;1000002512;Laurence Hartzog
+100061;100003;Execution of data migration for specific data objects (in context of integrating acquired companies).;1000002513;Merlin Bensley
+100062;100005;Using Artifactory or Nexus for Repoistory package management;1000002790;Milly Plants
+100063;100005;Applying and Implementing Artificial Intelligence;1000002789;Fonda Chisum
+100064;100004;Process Owner, represents IT within Audits and Risk Assessment process;1000002511;Alta Nishioka
+100065;100011;scripting for Unix and macOS;1000002726;Marlin Kirkley
+100066;100009;BML Language specific to Oracle CPQ Cloud, or API Integrations;1000002746;Nichole Geil
+100067;100014;Patch Management;1000002748;Neida Cadieux
+100068;100003;Test automation using CBTA;1000002750;Norman Yeater
+100069;100014;BMI/Product Catalog integrations/enhancements/ Maintenance/Operations;1000002749;Elease Fonte
+100070;100002;Service Desk;1000002756;Isabell Hermanson
+100071;100002;Network Services, Active Directory, Exchange, Unified Communication Technology, IBS;1000002754;Edris Peagler
+100072;100009;Workplace Delivery, Secure Services, Cloud Collaboration Plattform;1000002755;Elane Eggebrecht
+100073;100007;Design, Modelling and Concept for (master) data architectures, e.g. establish data object catalog, create data distribution diagrams;1000002752;Qiana Schoonover
+100074;100002;Design & Implementation of data protection solutions to ensure data compliance;1000002757;Santiago Minter
+100075;100007;Design & Implementation of data integration scenarios;1000002759;Alleen Laino
+100076;100009;Design & Implementation of data quality management solutions;1000002760;Trish Nishimura
+100077;100008;Design & Implementation of data retention mechanism to enable GDPR compliance activities.;1000002763;Carrol Renolds
+100078;100013;Data science techniques required for Machine Learning/Artificial Intelligence.;1000002764;Haywood Seth
+100079;100005;Demand and Delivery Tracker used for resource management and forecasting;1000002766;Latoya Noren
+100080;100011;Embedding security into delivery pipelines.;1000002767;Leigha Dumais
+100081;100014;Design & implement Master Data Management (MDM) concepts.;1000002769;Dalton Seel
+100082;100004;Developer Applications;1000002770;Kiersten Roig
+100083;100008;Developer UI/Design;1000002777;Alba Handley
+100084;100009;Developer Web;1000002781;Damion Mccants
+100085;100005;Test automation using eCATT;1000002782;Naida Marburger
+100086;100013;Tool for External Resource buying and requesting;1000002780;Carolee Grosvenor
+100087;100001;Professional Services Automation (PSA), Event Generation, Development and Configuration;1000002784;America Vittetoe
+100088;100006;Functional Consulting IT;1000002783;Gisela Burman
+100089;100005;Assure GDPR compliance by recording the details of new process/procedure;1000002785;Alaina Hoeft
+100090;100006;Groovy�used for scripting in integration and testing;1000002786;Dorine Gloor
+100091;100005;Web based development workbench;1000002788;Haley Colston
+100092;100007;Deliver cloud infrastructure via code, maintain servers via automated configuration mgmt tools.;1000002840;Madeleine Leggett
+100093;100013;Define integration strategy, drive creation of interface catalogues.;1000002791;Wilma Benshoof
+100094;100012;"Prepare & present overview of the IT Asset Mgmt Process for internal & external hardware & software Audits. 
+Present evidence in certification audits to demonstrate compliance of Hardware & Software Asset Management processes & controls.
+Post-audit follow-up of questions, issues found & resolve CAPA audit requests (corrective action - preventive action)";1000002938;Blanch Bunge
+100095;100003;"Execute regular control reviews of SAP Hardware Asset Lifecycle Mgmt process to ensure SAP Hardware Asset compliance is maintained.  
+Execute yearlysoftware campaings for ensuring SAP compliane of 3rd party software products, i.e. true-ups & contract re-negotiation. 
+Execute quarterly campaigns for driving removal of blacklist software off SAP devices & servers. ";1000002747;Corrina Sharpton
+100096;100003;"Identify & process Data Quality Inconsistencies in SAP asset inventories including Root Cause Analysis, Regular Data Monitoring & End-user support.
+Ongoing Stakeholder Management for process improvement feedback";1000002751;Syble Posner
+100097;100010;"Scanner selection for hardware asset scanning in SAP Landscapes.
+Scanner data transformation, standardization & validation.
+Monitoring & continuous improvement of scanner dataflow processes.
+Ongoing Stakeholder Management for process improvement feedback.";1000002762;Kemberly Willer
+100098;100005;"Ensure & Monitor SAP hardware & software asset Data Flow Process.
+Drive integration into SAP standard hardware asset inventory
+Incident Management & Root Cause Analysis
+Ongoing Stakeholder Management for process improvement feedback
+";1000004586;Nan Pembleton
+100099;100004;Strategic Enablement, IT Engagement, IT Consulting;1000002761;Nickie Townson
+100100;100006;IT devices & services, personal equipment (Windows & Mac), supporting services prourement, software licensing and email migration.;1000004484;Randell Demar
+100101;100010;DB Platform activities for our databases (MaxDB, ASE, HANA, SQL�);1000004585;Mittie Macfarland �
+100102;100011;De-Escalation Management for mission critical issues;1000002765;Herminia Weiser �
+100103;100013;FSC, Events, Field Infra Coordination, L1 Support, all Core Field Services from Location Strategy;1000004582;Ta Rothfuss �
+100104;100013;All processes, frameworks, principles, roles & responsibilities that ensure the effective and efficient use of IT in enabling an organization to achieve its goals.;1000004581;Marisol Carol �
+100105;100009;Incident Management and Root Cause Analysis including usage of monitoring tools;1000002771;Amee Hirsh �
+100106;100002;"Integration of SAP software lifecycle process & software Standards & software Mgmt Tools into M&As.
+Contract consolidation of M&As into SAP's contracts.
+Ongoing Stakeholder Management for process improvement feedback.";1000002772;Princess Liakos �
+100107;100002;Project Lead and execution tasks (e.g Infrastructure Workstream Leads, Upgrade/Migration projects);1000002774;Marylynn Rockmore �
+100108;100010;FPC, Woc, Mgmt Support, Manager, Supplier Mgmt;1000002776;Rodrigo Tallent �
+100109;100006;Design and setup of High Availability / Disaster Recovery solutions;1000002773;Alise Merced �
+100110;100004;Compliance evaluation of new software or software versions requested by SAP employees according to SAP Global Security, Global Legal & Purchasing guidelines. Consult Security/ Legal/ Purchasing experts on demand. Publish software rating in Software Rating Information (SRI) tool.;1000002778;Fredia Shih �
+100111;100010;"Ensure (client & server) software Contract Management incl. software Demand Planning w/ software consumer according to Business cases & price negotiations w/ publishers.
+Execute ongoing software consumer Engagement for consumption & demand trend analysis.
+Manage communication w/ software consumer community & rollouts of software standards.
+Manage costs of SAP software subscriptions, Licenses &  maintenance.
+Consulting of software consumers on cost reduction of software subscriptions, Licenses &  maintenance.";1000002779;Lyn Shilling �
+100112;100006;"Integration of new Software Products into SAP Software Asset LifeCycle process. 
+Ensure software approval according SAP policies & standards
+Secure budget of new software subscriptions & new software licences including consumption plan, payment plan & maintenance.
+Ongoing Stakeholder Management for process improvement feedback";1000002787;Librada Hannaford �
+100113;100012;SAP Internal IT Service Management ;1000002792;Allene Gianni �
+100114;100006;Administration of client management system for Macs, iPhones, iPads and Apple TVs;1000004110;Izola Barrick �
+100115;100011;Extentiond client management system for Macs, iPhones, iPads and Apple TVs captabilites;1000002793;Maxwell Thrower �
+100116;100002;Desigining, building and operating client management system infrustructure components for Macs, iPhones, iPads and Apple TVs management;1000004583;Carletta Musselman �
+100117;100008;Set-up, configuration, and maintenance of Atlassian Jira.;1000004584;Alethea Brownell �
+100118;100002;JavaScript Object Notation;1000004485;Jacklyn Geist �
+100119;100009;Ability to implement Lean Techniques.;1000004486;Chastity Brashear �
+100120;100007;Coordination of activites with relevant stakeholders (e.g Downtime planning, Patching etc);1000004361;Trudi Fung �
+100121;100005;Metranet API and Integrations/enhancements;1000004363;Alena Hewlett �
+100122;100009;Metranet billing system maintenance/operations;1000004362;Sherice Ringgold �
+100123;100010;Microsoft Access database;1000002865;Tequila Maul �
+100124;100008;Servers/Infra and applications Monitoring tool;1000002895;Elinore Hyun �
+100125;100011;Knowledge of configuring OKTA for SSO integrations;1000002874;Mohammed Hamon �
+100126;100005;Supporting the OKTA Platform.;1000002867;Letisha Letchworth �
+100127;100011;Apple / Unix Architecture, kernel, frameworks and principles of operation�;1000002883;Lakeesha Goulette �
+100128;100012;MVS / zOS Architecture, kernel, API and principles of operation ;1000002868;Hae Bever �
+100129;100004;Unix / Linux Architecture, kernel, API and principles of operation�;1000002869;Rudolph Fankhauser �
+100130;100006;Windows Architecture, kernel, API and principles of operation�;1000002870;Alan Schommer �
+100131;100002;Office Technology;1000002871;Lorelei Iannotti �
+100132;100003;Servers/Infra and applications Monitoring tool;1000002884;Lavada Wygant �
+100133;100004;Ability to help an organization on creating and sustaining Portfolio Management Techniques to deliver business value and allocate resources.;1000002872;Wenona Copley �
+100134;100014;Test automation using Postman;1000002873;Sofia Mark �
+100135;100014;Product Architect focuses on the Ops-aspects of a product. Closely working with the service provider, overseeing KPIs / SLAs and drive corrective actions to overall improve operations for the respective product;1000004436;Yuonne Riddles �
+100136;100005;Activities associated with the creation and management of a product backlog;1000002885;Ashlyn Goodwill �
+100137;100005;Activities associated with the design/creation and maintenance of a product vision and roadmap;1000002866;Bethel Giuffre �
+100138;100007;Knowledge of Qualtrics;1000002875;Bernardine Moniz �
+100139;100005;Safeguarding of Strategic Projects/QEC;1000002896;Janise Glazer �
+100140;100010;Salesforce Developer which includes areas such as Apex, Visualforce, ,SOAP, API, Lightning Web and Lightning Aura, or Live Agent REST API.;1000002878;Newton Strand �
+100141;100012;Salesforce Engineering;1000002879;Yuette Rife �
+100142;100003;Salesforce Operations, Incident Management, and Service Requests;1000002880;Fannie Verge �
+100143;100008;All kind of SAP Basis adminstration tasks;1000002881;Brandon Gasaway �
+100144;100007;Knowledge of the SAP for ME product / development framework;1000002882;Tessa Knepp �
+100145;100011;Kubernetes orchestation via Gardener;1000002886;Albertine Forck �
+100146;100009;Using security techniques to protect and rapdily change shared application secrets.;1000002887;Brittaney Mccabe �
+100147;100001;Seerene delivers an cloud based Software quality (external) service via dynamic software 2,5D � maps.;1000004340;Angelo Brezinski �
+100148;100004;Governance and operation for/within Service Management Framework;1000002876;Madeline Gilliard �
+100149;100002;Supports the ServiceNow Angular platform on the portal.;1000002888;Manual Ohalloran �
+100150;100013;SAP Internal Service Request Management for multiple LoBs;1000002877;Henrietta Halloway �
+100151;100006;The Signavio Business Transformation Suite provides flexible Business Process Management (BPM) (external) service.;1000002890;Wilber Waring �
+100152;100002;"Incorporates aspects of software engineering and applies them to infrastructure and operations problems. The main goals are to create ultra-scalable and highly reliable software systems. According to Ben Treynor, founder of Google's Site Reliability Team, SRE is ""what happens when a software engineer is tasked with what used to be called operations.""";1000004120;Solomon Raff �
+100153;100010;Methodology to improve the quality of process outputs by identifying and removing the causes of defects and minimizing variability (also known by its improvement process steps: Define, Measure, Analyze, Improve, Control (DMAIC)).;1000002889;Janae Reddington �
+100154;100009;Case Management in ServiceNow;1000002891;Otelia Saavedra �
+100155;100010;Change Management in ServiceNow;1000002892;Jacalyn Hafley �
+100156;100001;CMDB in ServiceNow;1000003011;Lin Trahan �
+100157;100009;Incident Management in ServiceNow;1000002893;Tandra Rafter �
+100158;100008;Problem Management in ServiceNow;1000004435;Gilma Goldsmith �
+100159;100014;Ability to connect via social media platforms.;1000002897;Danuta Mcelroy �
+100160;100005;Servers/Infra and applications Monitoring tool;1000002894;Lilliana Jacobus �
+100161;100005;Understands and can implement various source control practices such as gitflow.;1000002898;Neville Mattice �
+100162;100002;Managing the process according to SAP Process Map  8.1.3.5 Manage Identity & Access ;1000000118;Erika Crist �
+100163;100013;Using SWAGGER for integration documentation;1000000117;Kendal Rushing �
+100164;100005;Managing and monitoring all installed systems and infrastructure throughout the entire stack. IInstalling, configuring, testing and maintaining operating systems, application software and system management tools. Ensuring the highest levels of systems and infrastructure availability.;1000000116;Aubrey Trombly �
+100165;100012;Retirement of legacy systems and data archivals.;1000000115;Barbara Mondor �
+100166;100005;Setting up, configuring and running Tableau;1000002638;Nickole Noda �
+100167;100004;Early validation of new hardware architecture, HANA release and feature validation;1000002847;Shantay Henriques �
+100168;100005;Text message marketing software;1000002846;Ursula Fett �
+100169;100012;Performing TEAP checks and creating and releasing transport requests;1000002845;Abe Trembath �
+100170;100007;SAP Internal Fiori Application for unified ticketing;1000000084;Danielle Tolle �
+100171;100011;Visual Basic for Applications;1000004587;Lorrine Hertlein �
+100172;100012;SAP Internal Whistleblower Tool;1000004742;Judie Vantrease �
+100173;100005;Test Automation Software;1000004741;Cami Buscher �
+100174;100014;Native development for macOS, iOS and tvOS;1000004588;Etta Mcelvain �
+100175;100007;YMAL Ain't�Markup Language;1000004589;Shavonne Gangemi �
+100176;100001;Zuora billing system maintenance/operations;1000004805;Myrtie Altman �
+100177;100007;Java EE Oracle MS SQL ;1000004590;Drusilla Tippett �
+100178;100010;(MRAM) � Drive Active Renewal end to end process to maximize renewal rate;1000004775;Emma Lufkin �
+100179;100003;(MSM) - Represent internally and externally the maintenance policies via deal support or customer engagement;1000004779;Meghan Roller �
+100180;100007;Drive Operational Excellence and �support all relevant M-GTM Programs;1000004781;Pandora Swaby �
+100181;100010;(SCE) � Focusing on strategic deal support and commercial rules;1000004780;Maricruz Vandehey �
+100182;100001;Activities associated with Attracting, Onboarding, Upskilling, and Retaining resources;1000004591;Mohammad Packer �
+100183;100004;Contract creation and monitoring;1000004592;Elsy Platter �
+100184;100014;Sharing the SAP runs SAP story with SAP Customers;1000004744;Shaun Hoang �
+100185;100008;Provide optimized processes�and enablement across delivery teams. Specific focus on operational excellence to simplify processes and increase operational efficiency, enable customer success through innovation and drive employee development and engagement.;1000004593;Gina Coss �
+100186;100002;Manage Pipeline in cooperation with Sales;1000004594;Tomas Delossantos �
+100187;100009;Manages teams of Developers, people development & training plan incl. SAP Talks, compensation & equity, fosters employee satisfaction and leadership trust, resolves problems and conflicts in team, organizational change management ;1000004595;Dalia Popovic �
+100188;100007;"Is responsible for cascading the strategy within own area of responsibility; has to ensure that strategy is executed based on defined goals";1000004783;Rocco Lillie �
+100189;100001;Is responsible for financial management reporting based on Utilization, Forecast, and Budgeting within own area of responsibility;1000004596;Dahlia Smail �
+100190;100009;Liases with peers and stakeholders on similar topics to leverage synergies ;1000004597;Zachery Zuccaro �
+100191;100012;Establish yardsticks and few factors that are as important to the performance of the organization and every man/woman in it, make the measurements focused on the performance of the whole organization and every individual available to each staff member, analyze, appraise, and interpret performance, communicate the meaning of the measurements and their findings to subordinates, superiors, and colleagues.;1000004598;Leia Montgomery �
+100192;100010;Make a team out of the people that are responsible for various jobs, empower employees and motivate them to follow through on strategic focus, take relationship responsibility, make people decisions on pay, placement, and promotion, communicate constantly to and from subordinates, superiors, and colleagues.;1000004599;Kirsten Albert �
+100193;100014;Analyze activities, decisions, and relations needed to classify the work, divide the work into manageable activities and further divide the activities into manageable jobs, group units and jobs into an organization structure, select people for the management of the units and for the job to be done.;1000004601;Elva Weymouth �
+100194;100006;Is responsible for the Partner Management within own area of responsibility, i.e. team or organization;1000004602;Ashely Corrao �
+100195;100007;Support team members and mentees in development planning and fulfilment, acts as coach and guide for individuals to find their right career track, turns active if individuals are passive on their development;1000004603;Dora Herrin �
+100196;100005;Is responsible for the resource allocation management Services assignments;1000004788;Shandra Maynard �
+100197;100002;Enable a consistent start for all resources, creation of onboarding materials, facilitation of onboarding sessions;1000004787;Thomasine Beery �
+100198;100008;Managing long term end to end engagement (for acting Service & Support Lead only);1000004784;Cyndy Hopp �
+100199;100007;Determine objectives aligned with corporate/board area/L1 unit vision and mission statement, determine goals in each area of objectives, decide what has to be done to reach the objectives, communicate objectives to the people whose performance is needed to attain them.;1000004785;Tobias Guthmiller �
+100200;100007;Managing Supply Resources (Qualification, Utilization);1000004786;Jami Schoonover �
