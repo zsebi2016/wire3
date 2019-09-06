@@ -30,3 +30,12 @@ Entity EXPERT {
 	EXT_ID : String(100);
 	NAME : String (100);
 }
+
+@cds.persistence.exists
+entity EXPERT_TEAM {
+  key ID : Integer;
+  TEAM_NAME : String(200);
+  DESCRIPTION : String;
+  TEAM_LEAD : Integer;
+  PARENT_TEAM : Integer;
+};

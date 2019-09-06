@@ -4,6 +4,91 @@
     "ExpertService": {
       "kind": "service"
     },
+    "ExpertService.Expert": {
+      "kind": "entity",
+      "@Capabilities.DeleteRestrictions.Deletable": false,
+      "@Capabilities.InsertRestrictions.Insertable": false,
+      "@Capabilities.UpdateRestrictions.Updatable": false,
+      "@cds.persistence.name": "EXPERTSERVICE_EXPERT",
+      "@readonly": true,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "my.wire.EXPERT"
+            ]
+          }
+        }
+      },
+      "elements": {
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "REPORTS_TO": {
+          "@cds.persistence.name": "REPORTS_TO",
+          "type": "cds.Integer"
+        },
+        "SKILL_SET": {
+          "@cds.persistence.name": "SKILL_SET",
+          "type": "cds.String"
+        },
+        "EXT_ID": {
+          "@cds.persistence.name": "EXT_ID",
+          "type": "cds.String",
+          "length": 100
+        },
+        "NAME": {
+          "@cds.persistence.name": "NAME",
+          "type": "cds.String",
+          "length": 100
+        }
+      },
+      "$syntax": "projection"
+    },
+    "ExpertService.Expert_team": {
+      "kind": "entity",
+      "@Capabilities.DeleteRestrictions.Deletable": false,
+      "@Capabilities.InsertRestrictions.Insertable": false,
+      "@Capabilities.UpdateRestrictions.Updatable": false,
+      "@cds.persistence.name": "EXPERTSERVICE_EXPERT_TEAM",
+      "@readonly": true,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "my.wire.EXPERT_TEAM"
+            ]
+          }
+        }
+      },
+      "elements": {
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "TEAM_NAME": {
+          "@cds.persistence.name": "TEAM_NAME",
+          "type": "cds.String",
+          "length": 200
+        },
+        "DESCRIPTION": {
+          "@cds.persistence.name": "DESCRIPTION",
+          "type": "cds.String"
+        },
+        "TEAM_LEAD": {
+          "@cds.persistence.name": "TEAM_LEAD",
+          "type": "cds.Integer"
+        },
+        "PARENT_TEAM": {
+          "@cds.persistence.name": "PARENT_TEAM",
+          "type": "cds.Integer"
+        }
+      },
+      "$syntax": "projection"
+    },
     "ExpertService.Expert_teams": {
       "kind": "entity",
       "@Capabilities.DeleteRestrictions.Deletable": false,
@@ -56,7 +141,7 @@
         "SELECT": {
           "from": {
             "ref": [
-              "my.wire.EXPERT"
+              "my.wire.Experts"
             ]
           }
         }
@@ -67,23 +152,21 @@
           "key": true,
           "type": "cds.Integer"
         },
-        "REPORTS_TO": {
+        "reports_to": {
           "@cds.persistence.name": "REPORTS_TO",
           "type": "cds.Integer"
         },
-        "SKILL_SET": {
+        "skill_set": {
           "@cds.persistence.name": "SKILL_SET",
           "type": "cds.String"
         },
-        "EXT_ID": {
+        "ext_id": {
           "@cds.persistence.name": "EXT_ID",
-          "type": "cds.String",
-          "length": 100
+          "type": "cds.String"
         },
-        "NAME": {
+        "name": {
           "@cds.persistence.name": "NAME",
-          "type": "cds.String",
-          "length": 100
+          "type": "cds.String"
         }
       },
       "$syntax": "projection"
@@ -113,7 +196,7 @@
         "expert": {
           "@cds.persistence.name": "EXPERT",
           "type": "cds.Association",
-          "target": "my.wire.Experts",
+          "target": "ExpertService.Experts",
           "keys": [
             {
               "ref": [
@@ -176,6 +259,35 @@
           "@cds.persistence.name": "NAME",
           "type": "cds.String",
           "length": 100
+        }
+      }
+    },
+    "my.wire.EXPERT_TEAM": {
+      "kind": "entity",
+      "@cds.persistence.exists": true,
+      "@cds.persistence.name": "MY_WIRE_EXPERT_TEAM",
+      "elements": {
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "TEAM_NAME": {
+          "@cds.persistence.name": "TEAM_NAME",
+          "type": "cds.String",
+          "length": 200
+        },
+        "DESCRIPTION": {
+          "@cds.persistence.name": "DESCRIPTION",
+          "type": "cds.String"
+        },
+        "TEAM_LEAD": {
+          "@cds.persistence.name": "TEAM_LEAD",
+          "type": "cds.Integer"
+        },
+        "PARENT_TEAM": {
+          "@cds.persistence.name": "PARENT_TEAM",
+          "type": "cds.Integer"
         }
       }
     },

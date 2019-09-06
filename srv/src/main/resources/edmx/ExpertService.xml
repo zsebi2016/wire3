@@ -6,14 +6,40 @@
   <edmx:DataServices m:DataServiceVersion="2.0">
     <Schema Namespace="ExpertService" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
       <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Expert" EntityType="ExpertService.Expert"/>
+        <EntitySet Name="Expert_team" EntityType="ExpertService.Expert_team"/>
         <EntitySet Name="Expert_teams" EntityType="ExpertService.Expert_teams"/>
         <EntitySet Name="Experts" EntityType="ExpertService.Experts"/>
         <EntitySet Name="Team_members" EntityType="ExpertService.Team_members"/>
+        <AssociationSet Name="Team_members_expert" Association="ExpertService.Team_members_expert">
+          <End Role="Team_members" EntitySet="Team_members"/>
+          <End Role="Experts" EntitySet="Experts"/>
+        </AssociationSet>
         <AssociationSet Name="Team_members_team" Association="ExpertService.Team_members_team">
           <End Role="Team_members" EntitySet="Team_members"/>
           <End Role="Expert_teams" EntitySet="Expert_teams"/>
         </AssociationSet>
       </EntityContainer>
+      <EntityType Name="Expert">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="REPORTS_TO" Type="Edm.Int32"/>
+        <Property Name="SKILL_SET" Type="Edm.String"/>
+        <Property Name="EXT_ID" Type="Edm.String" MaxLength="100"/>
+        <Property Name="NAME" Type="Edm.String" MaxLength="100"/>
+      </EntityType>
+      <EntityType Name="Expert_team">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="TEAM_NAME" Type="Edm.String" MaxLength="200"/>
+        <Property Name="DESCRIPTION" Type="Edm.String"/>
+        <Property Name="TEAM_LEAD" Type="Edm.Int32"/>
+        <Property Name="PARENT_TEAM" Type="Edm.Int32"/>
+      </EntityType>
       <EntityType Name="Expert_teams">
         <Key>
           <PropertyRef Name="ID"/>
@@ -29,30 +55,32 @@
           <PropertyRef Name="ID"/>
         </Key>
         <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
-        <Property Name="REPORTS_TO" Type="Edm.Int32"/>
-        <Property Name="SKILL_SET" Type="Edm.String"/>
-        <Property Name="EXT_ID" Type="Edm.String" MaxLength="100"/>
-        <Property Name="NAME" Type="Edm.String" MaxLength="100"/>
+        <Property Name="reports_to" Type="Edm.Int32"/>
+        <Property Name="skill_set" Type="Edm.String"/>
+        <Property Name="ext_id" Type="Edm.String"/>
+        <Property Name="name" Type="Edm.String"/>
       </EntityType>
       <EntityType Name="Team_members">
         <Key>
           <PropertyRef Name="ID"/>
         </Key>
         <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
-        <NavigationProperty Name="expert" Relationship="ExpertService.Team_members_expert" FromRole="Team_members" ToRole="my_wire_Experts_Proxy_0"/>
+        <NavigationProperty Name="expert" Relationship="ExpertService.Team_members_expert" FromRole="Team_members" ToRole="Experts"/>
         <NavigationProperty Name="team" Relationship="ExpertService.Team_members_team" FromRole="Team_members" ToRole="Expert_teams"/>
         <Property Name="expert_ID" Type="Edm.Int32"/>
         <Property Name="team_ID" Type="Edm.Int32"/>
       </EntityType>
-      <EntityType Name="my_wire_Experts_Proxy_0">
-        <Key>
-          <PropertyRef Name="ID"/>
-        </Key>
-        <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
-      </EntityType>
       <Association Name="Team_members_expert">
         <End Role="Team_members" Type="ExpertService.Team_members" Multiplicity="*"/>
-        <End Role="my_wire_Experts_Proxy_0" Type="ExpertService.my_wire_Experts_Proxy_0" Multiplicity="0..1"/>
+        <End Role="Experts" Type="ExpertService.Experts" Multiplicity="0..1"/>
+        <ReferentialConstraint>
+          <Principal Role="Experts">
+            <PropertyRef Name="ID"/>
+          </Principal>
+          <Dependent Role="Team_members">
+            <PropertyRef Name="expert_ID"/>
+          </Dependent>
+        </ReferentialConstraint>
       </Association>
       <Association Name="Team_members_team">
         <End Role="Team_members" Type="ExpertService.Team_members" Multiplicity="*"/>
@@ -66,6 +94,40 @@
           </Dependent>
         </ReferentialConstraint>
       </Association>
+      <Annotations Target="ExpertService.EntityContainer/Expert" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ExpertService.EntityContainer/Expert_team" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
       <Annotations Target="ExpertService.EntityContainer/Expert_teams" xmlns="http://docs.oasis-open.org/odata/ns/edm">
         <Annotation Term="Capabilities.DeleteRestrictions">
           <Record Type="Capabilities.DeleteRestrictionsType">
