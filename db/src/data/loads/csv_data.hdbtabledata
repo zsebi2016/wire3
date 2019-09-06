@@ -1,0 +1,38 @@
+{
+	"format_version": 1,
+	"imports": [
+		{
+			"target_table": "EXPERT",
+			"source_data": {
+			"data_type": "CSV",
+				"file_name": "expert.csv",
+				"has_header": true,
+				"type_config": {
+					"delimiter": ";"
+				}
+			}
+		},
+		{
+			"target_table": "EXPERT_TEAM",
+			"source_data": {
+			"data_type": "CSV",
+				"file_name": "expert_team.csv",
+				"has_header": true,
+				"type_config": {
+					"delimiter": ";"
+				}
+			}
+		},
+		{
+			"target_table": "TEAM_MEMBER",
+			"source_data": {
+			"data_type": "CSV",
+				"file_name": "team_member.csv",
+				"has_header": true,
+				"type_config": {
+					"delimiter": ";"
+				}
+			}
+		}
+	]
+}

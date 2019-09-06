@@ -1,0 +1,102 @@
+ID;TEAM_NAME;DESCRIPTION;TEAM_LEAD;PARENT_TEAM
+100001;Dynatrace;Cloud infrastructure monitoring using Dynatrace;100001;100001
+100002;HTML;HTML Development;100001;100001
+100003;HTML5 Development;Be able to develop with HTML5;100002;100002
+100004;Jupiter;Development environment for Python based Machine Learning framework;100003;100003
+100005;Maven;Development Build automation based on Maven tool;100004;100004
+100006;Mongo DB;Database usage of Mongo DB;100005;100005
+100007;Network Programming;Client / Server Network Socket Programming and TCP Protocols;100006;100006
+100008;Pipeline Tools for Cloud Applications;Jenkins, xMake, GIT, Gerrit, etc.;100007;100007
+100009;Product Manager;Is responsible for roll-in of requirements, creation of  value-based presentations, demos and publications to customers, user groups and partners.;100008;100008
+100010;Product Owner;Knowledge and Experience as Product Owner;100009;100009
+100011;Protractor;Set-up and configuration of  Protractor Testsuite;100010;100010
+100012;Proxy Programming;Development of dedicated and generic proxy solutions;100011;100011
+100013;Release Engineering;Technical package builds and release of software across environments. ;100012;100012
+100014;Replication Technologies;PI, Postbox, CPI, MidServer, RFC;100013;100013
+100015;Ruby/Rails;DevOps automation and web development;100014;100014
+100016;SAP Kernel�;SAP Kernel Development and Analysis�of Kernel Components ( SAP NI, Gateway, RFC, SAPRouter, ICM etc );100015;100015
+100017;Scrum Master;Knowledge and Experience as Scrum Master;100011;100011
+100018;Software Developer;Realizes business requirements and provides solutions via coding, provides test cases and raw documentation;100009;100009
+100019;Software Quality Management ;Ensures availability of test systems, coordinates test planning, availability of test scripts, ensures test automation, manages quality gates and solution validation, responsible for product standard compliance;100003;100003
+100020;Sonar;Test automation based on Sonar framework;100013;100013
+100021;Splunk;Use of Log-, Monitoring- and Reporting-Tool Splunk;100008;100008
+100022;System Landscape Operations;"Safeguard system availability and performance for development environment; upgrade of system, test data, security";100004;100004
+100023;TensorFlow;Development based on Google Machine Learning API;100004;100004
+100024;User Assistance;Writes documentation, user guides, value help, SAP Help Portal content, built in documentation, �;100004;100004
+100025;UX (User Experience);Responsible for User Experience: research, collect customer feedback and requirements, write user stories;100006;100006
+100026;X509 Certificate Technology;Publikc Key Infrastructure, Server Certificates, User Certificates;100001;100001
+100027;360 Degree System Health Check;360 Degree System Health Check;100005;100005
+100028;Application Lifecycle Management (ALM);Understand how Application Lifecycle Management is done / explained / setup;100001;100001
+100029;Backoffice (Remote Support);Remote Support in Backoffice;100002;100002
+100030;Deployment Support;Support innovation adoption;100011;100011
+100031;E2E Value Management;Creation of Value Bridge. Positioning of Value Base Innovation Roadmap, KPIs and Four Panel;100002;100002
+100032;Enterprise Support Advisor;Advisors delivering Enterprise Support ;100001;100001
+100033;Escalation Manager;"Resolving top issues or administrative activities for a specific customer escalation; escalation management";100001;100001
+100034;ICC (Innovation Control Center);Understand how an Innovation Control Center is working / explained / setup;100010;100010
+100035;MCC Analyst;MCC Engagement Support (e.g. Risk Management, PERC Review, Report Review, Scheduled BO duty);100011;100011
+100036;Mission Critical Support;Mission Critical Support (e.g. Incident Escalation Management);100009;100009
+100037;Presales Support;Opportunity Solutioning & Orchestration, Presales Support;100005;100005
+100038;PSLE Advisor;PSLE contact for large customer;100014;100014
+100039;runSAP (Operation Control Center);Understand how Operation Control Centers are working / explained / setup;100013;100013
+100040;Serv. Prep. Healthcheck;Serv. Prep. Healthcheck;100008;100008
+100041;Service and Infrastructure Developer;Service development;100001;100001
+100042;Solutioning - PE;Solutioning for PE Deals;100003;100003
+100043;Solutioning - PS;Solutioning for Services Deals;100009;100009
+100044;Strategic Support Engagement;Drive SAP ES&/or PE customer engagements - focusing on core engagement deliverables that support: Customer Success, Mission Critical Support, Empowernment, Collaboration, Proactive Guidance;100012;100012
+100045;Data Center & Server Infrastructure Integration;"Data Center: Transition acquired company data center infrastructure to SAP infrastructure and facilities.
+Server: Focus is on transitioning servers that support the acquired company business to SAP infrastructure.";100008;100008
+100046;Data Modeling;Data Modeling;100013;100013
+100047;Data Movement Modeling;Data Movement Modeling;100009;100009
+100048;Data Volume Management;Archiving, Data Retention and Deletion, Information Lifecycle Management;100002;100002
+100049;Development;Development;100008;100008
+100050;HANA Operations;Operate HANA specific modules (e.g. , XSA, SDA);100002;100002
+100051;Health Check;Health Check;100007;100007
+100052;Hybrid Operation;Operate hybrid solutions and provide frameworks/tools (parallel operation of SaaS and onPrem solutions);100004;100004
+100053;IaaS Cloud Delivery Management;IaaS Cloud Architecture and Enablement, Cost and Resource Management;100007;100007
+100054;Installation;Installation;100006;100006
+100055;Integration & Orchestration;Integration & Orchestration (e.g. PI, Cloud Connector, SLT);100001;100001
+100056;JAVA Development;JAVA Development;100010;100010
+100057;Knowledge Management Tools ;Maintain and operate solutions like WiKi, SAP Jam, MS Teams, Slack, �;100004;100004
+100058;Load Test Set-Up and Execution;Develop and execute load test scenarios (e.g. HP Loadrunner);100001;100001
+100059;Migration;Migration (OS, Database, Cloud);100008;100008
+100060;Migration Coaching;Migration Coaching;100014;100014
+100061;Migration Planning;Migration Planning;100003;100003
+100062;Migration Review / Evaluation;Migration Review / Evaluation;100005;100005
+100063;Mobile Use-Case: Config & Implementation;Mobile Use-Case: Config & Implementation;100005;100005
+100064;Network Infrastructure Integration;Deploy the SAP network to acquired company locations.;100004;100004
+100065;Operations Concepts;Design and support of Operations Concepts;100011;100011
+100066;Optimization;Optimization of technical system landscapes;100009;100009
+100067;Performance Measurement and Optimization;Performance measurements, RCA, technical optimization of SAP systems and HANA DB;100014;100014
+100068;Platform Development (DevOps);Automation, DevOps and testing (GitHub, Jenkins, HoneyComb);100003;100003
+100069;Project Review Technical;Project Review Technical;100014;100014
+100070;Quality Assurance;Quality Assurance of technology projects / landscapes;100002;100002
+100071;RealTime Replication;RealTime Replication;100002;100002
+100072;Release planning & execution;Release Management including planning, scheduling, and technical execution;100009;100009
+100073;Replication Architecture;Replication Architecture;100007;100007
+100074;Replication Scenarios (Publish);Plan, manage, configure Publish/Subscribe scenarios, monitor for performance;100002;100002
+100075;Replication Scenarios (Warm Standby);Plan, manage, configure Warm Standby instances, monitor for performance;100007;100007
+100076;Roles, Authorizations & User Mgmt;Roles, Authorizations & User Mgmt;100009;100009
+100077;SAP Cloud Platform Services;Operate services on SAP Cloud Platform (e.g Deployment..);100008;100008
+100078;Scripting Languages;Scipting Lanagues like Phython, Ruby, Perl, Java Script, UI5, Bash, Shell;100013;100013
+100079;Security Compliance;Ensure Security compliance of System Landscapes (e.g OS, Database..);100005;100005
+100080;Security Concept;Design and support of Security Concepts;100011;100011
+100081;Sizing;Sizing;100014;100014
+100082;SLO Analysis Execution;SLO Analysis Execution;100004;100004
+100083;SLO Tool Implementation and Execution;SLO Tool Implementation and Execution;100008;100008
+100084;SQL Development;SQL Development;100009;100009
+100085;System Copy;System Copy;100005;100005
+100086;System Setup;Setup of Systemlandscapes;100013;100013
+100087;System Upgrade;Version upgrades of SAP systems, databases, etc.;100001;100001
+100088;Technical Architecture;Technical Architecture;100006;100006
+100089;Technical Change Management;Technical Change Management;100005;100005
+100090;Technical Conception;Technical Conception;100006;100006
+100091;Technical Implementation;Technical Implementation;100005;100005
+100092;Transformation Blueprint Creation;Transformation Blueprint Creation;100007;100007
+100093;UI5 Development;UI5 Development / Fiori Development;100013;100013
+100094;UML Modelling;UML Modelling;100012;100012
+100095;Unicode Handling;Unicode Handling;100003;100003
+100096;Unicode MDMP Handling;Unicode MDMP Handling;100003;100003
+100097;Upgrade and EHP Planning;Upgrade and EHP Planning;100010;100010
+100098;VBS Scripting;VBS Scripting;100005;100005
+100099;Shaun �;Strategic Enablement, IT Engagement, IT Consulting;100004;100004
+100100;Elfreda �;IT devices & services, personal equipment (Windows & Mac), supporting services prourement, software licensing and email migration.;100006;100006
