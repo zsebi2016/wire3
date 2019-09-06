@@ -6,4 +6,5 @@ service ExpertService {
   entity Team_members @readonly as projection on wire.Team_members;
   entity Expert @readonly as projection on wire.EXPERT;
   entity Expert_team @readonly as projection on wire.EXPERT_TEAM;
+  entity Team_member @readonly as projection on wire.TEAM_MEMBER;
 }

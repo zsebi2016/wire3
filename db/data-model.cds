@@ -38,4 +38,13 @@ entity EXPERT_TEAM {
   DESCRIPTION : String;
   TEAM_LEAD : Integer;
   PARENT_TEAM : Integer;
-};
+}
+
+@cds.persistence.exists
+entity TEAM_MEMBER {
+  key ID : Integer;
+  EXPERT : association to EXPERT on EXPERT.ID = EXPERT_ID;
+  TEAM : association to EXPERT_TEAM on TEAM.ID = TEAM_ID;
+  EXPERT_ID : Integer;
+  TEAM_ID : Integer;
+}
