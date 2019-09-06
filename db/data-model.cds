@@ -21,3 +21,12 @@ entity Team_members {
   expert  : Association to Experts;
   team : Association to Expert_teams;
 }
+
+@cds.persistence.exists
+Entity EXPERT {
+	key ID : Integer;
+	REPORTS_TO : Integer;
+	SKILL_SET: String;
+	EXT_ID : String(100);
+	NAME : String (100);
+}

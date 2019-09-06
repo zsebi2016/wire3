@@ -56,7 +56,7 @@
         "SELECT": {
           "from": {
             "ref": [
-              "my.wire.Experts"
+              "my.wire.EXPERT"
             ]
           }
         }
@@ -67,21 +67,23 @@
           "key": true,
           "type": "cds.Integer"
         },
-        "reports_to": {
+        "REPORTS_TO": {
           "@cds.persistence.name": "REPORTS_TO",
           "type": "cds.Integer"
         },
-        "skill_set": {
+        "SKILL_SET": {
           "@cds.persistence.name": "SKILL_SET",
           "type": "cds.String"
         },
-        "ext_id": {
+        "EXT_ID": {
           "@cds.persistence.name": "EXT_ID",
-          "type": "cds.String"
+          "type": "cds.String",
+          "length": 100
         },
-        "name": {
+        "NAME": {
           "@cds.persistence.name": "NAME",
-          "type": "cds.String"
+          "type": "cds.String",
+          "length": 100
         }
       },
       "$syntax": "projection"
@@ -111,7 +113,7 @@
         "expert": {
           "@cds.persistence.name": "EXPERT",
           "type": "cds.Association",
-          "target": "ExpertService.Experts",
+          "target": "my.wire.Experts",
           "keys": [
             {
               "ref": [
@@ -146,6 +148,36 @@
         }
       },
       "$syntax": "projection"
+    },
+    "my.wire.EXPERT": {
+      "kind": "entity",
+      "@cds.persistence.exists": true,
+      "@cds.persistence.name": "MY_WIRE_EXPERT",
+      "elements": {
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "REPORTS_TO": {
+          "@cds.persistence.name": "REPORTS_TO",
+          "type": "cds.Integer"
+        },
+        "SKILL_SET": {
+          "@cds.persistence.name": "SKILL_SET",
+          "type": "cds.String"
+        },
+        "EXT_ID": {
+          "@cds.persistence.name": "EXT_ID",
+          "type": "cds.String",
+          "length": 100
+        },
+        "NAME": {
+          "@cds.persistence.name": "NAME",
+          "type": "cds.String",
+          "length": 100
+        }
+      }
     },
     "my.wire.Expert_teams": {
       "kind": "entity",
