@@ -1,6 +1,65 @@
 {
   "namespace": "my.wire",
   "definitions": {
+    "EXPERT": {
+      "kind": "entity",
+      "@cds.persistence.exists": true,
+      "@cds.persistence.name": "EXPERT",
+      "elements": {
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "REPORTS_TO": {
+          "@cds.persistence.name": "REPORTS_TO",
+          "type": "cds.Integer"
+        },
+        "SKILL_SET": {
+          "@cds.persistence.name": "SKILL_SET",
+          "type": "cds.String"
+        },
+        "EXT_ID": {
+          "@cds.persistence.name": "EXT_ID",
+          "type": "cds.String",
+          "length": 100
+        },
+        "NAME": {
+          "@cds.persistence.name": "NAME",
+          "type": "cds.String",
+          "length": 100
+        }
+      }
+    },
+    "EXPERT_TEAM": {
+      "kind": "entity",
+      "@cds.persistence.exists": true,
+      "@cds.persistence.name": "EXPERT_TEAM",
+      "elements": {
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "TEAM_NAME": {
+          "@cds.persistence.name": "TEAM_NAME",
+          "type": "cds.String",
+          "length": 200
+        },
+        "DESCRIPTION": {
+          "@cds.persistence.name": "DESCRIPTION",
+          "type": "cds.String"
+        },
+        "TEAM_LEAD": {
+          "@cds.persistence.name": "TEAM_LEAD",
+          "type": "cds.Integer"
+        },
+        "PARENT_TEAM": {
+          "@cds.persistence.name": "PARENT_TEAM",
+          "type": "cds.Integer"
+        }
+      }
+    },
     "ExpertService": {
       "kind": "service"
     },
@@ -15,8 +74,9 @@
         "SELECT": {
           "from": {
             "ref": [
-              "my.wire.EXPERT"
-            ]
+              "EXPERT"
+            ],
+            "as": "exp"
           }
         }
       },
@@ -58,8 +118,9 @@
         "SELECT": {
           "from": {
             "ref": [
-              "my.wire.EXPERT_TEAM"
-            ]
+              "EXPERT_TEAM"
+            ],
+            "as": "team"
           }
         }
       },
@@ -89,88 +150,6 @@
       },
       "$syntax": "projection"
     },
-    "ExpertService.Expert_teams": {
-      "kind": "entity",
-      "@Capabilities.DeleteRestrictions.Deletable": false,
-      "@Capabilities.InsertRestrictions.Insertable": false,
-      "@Capabilities.UpdateRestrictions.Updatable": false,
-      "@cds.persistence.name": "EXPERTSERVICE_EXPERT_TEAMS",
-      "@readonly": true,
-      "query": {
-        "SELECT": {
-          "from": {
-            "ref": [
-              "my.wire.Expert_teams"
-            ]
-          }
-        }
-      },
-      "elements": {
-        "ID": {
-          "@cds.persistence.name": "ID",
-          "key": true,
-          "type": "cds.Integer"
-        },
-        "team_name": {
-          "@cds.persistence.name": "TEAM_NAME",
-          "type": "cds.String"
-        },
-        "description": {
-          "@cds.persistence.name": "DESCRIPTION",
-          "type": "cds.String"
-        },
-        "team_lead": {
-          "@cds.persistence.name": "TEAM_LEAD",
-          "type": "cds.Integer"
-        },
-        "parent_team": {
-          "@cds.persistence.name": "PARENT_TEAM",
-          "type": "cds.Integer"
-        }
-      },
-      "$syntax": "projection"
-    },
-    "ExpertService.Experts": {
-      "kind": "entity",
-      "@Capabilities.DeleteRestrictions.Deletable": false,
-      "@Capabilities.InsertRestrictions.Insertable": false,
-      "@Capabilities.UpdateRestrictions.Updatable": false,
-      "@cds.persistence.name": "EXPERTSERVICE_EXPERTS",
-      "@readonly": true,
-      "query": {
-        "SELECT": {
-          "from": {
-            "ref": [
-              "my.wire.Experts"
-            ]
-          }
-        }
-      },
-      "elements": {
-        "ID": {
-          "@cds.persistence.name": "ID",
-          "key": true,
-          "type": "cds.Integer"
-        },
-        "reports_to": {
-          "@cds.persistence.name": "REPORTS_TO",
-          "type": "cds.Integer"
-        },
-        "skill_set": {
-          "@cds.persistence.name": "SKILL_SET",
-          "type": "cds.String"
-        },
-        "ext_id": {
-          "@cds.persistence.name": "EXT_ID",
-          "type": "cds.String"
-        },
-        "name": {
-          "@cds.persistence.name": "NAME",
-          "type": "cds.String"
-        }
-      },
-      "$syntax": "projection"
-    },
     "ExpertService.Team_member": {
       "kind": "entity",
       "@Capabilities.DeleteRestrictions.Deletable": false,
@@ -182,8 +161,9 @@
         "SELECT": {
           "from": {
             "ref": [
-              "my.wire.TEAM_MEMBER"
-            ]
+              "TEAM_MEMBER"
+            ],
+            "as": "member"
           }
         }
       },
@@ -242,12 +222,97 @@
       },
       "$syntax": "projection"
     },
-    "ExpertService.Team_members": {
+    "ExpertService_old": {
+      "kind": "service"
+    },
+    "ExpertService_old.Expert_teams": {
       "kind": "entity",
       "@Capabilities.DeleteRestrictions.Deletable": false,
       "@Capabilities.InsertRestrictions.Insertable": false,
       "@Capabilities.UpdateRestrictions.Updatable": false,
-      "@cds.persistence.name": "EXPERTSERVICE_TEAM_MEMBERS",
+      "@cds.persistence.name": "EXPERTSERVICE_OLD_EXPERT_TEAMS",
+      "@readonly": true,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "my.wire.Expert_teams"
+            ]
+          }
+        }
+      },
+      "elements": {
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "team_name": {
+          "@cds.persistence.name": "TEAM_NAME",
+          "type": "cds.String"
+        },
+        "description": {
+          "@cds.persistence.name": "DESCRIPTION",
+          "type": "cds.String"
+        },
+        "team_lead": {
+          "@cds.persistence.name": "TEAM_LEAD",
+          "type": "cds.Integer"
+        },
+        "parent_team": {
+          "@cds.persistence.name": "PARENT_TEAM",
+          "type": "cds.Integer"
+        }
+      },
+      "$syntax": "projection"
+    },
+    "ExpertService_old.Experts": {
+      "kind": "entity",
+      "@Capabilities.DeleteRestrictions.Deletable": false,
+      "@Capabilities.InsertRestrictions.Insertable": false,
+      "@Capabilities.UpdateRestrictions.Updatable": false,
+      "@cds.persistence.name": "EXPERTSERVICE_OLD_EXPERTS",
+      "@readonly": true,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "my.wire.Experts"
+            ]
+          }
+        }
+      },
+      "elements": {
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "reports_to": {
+          "@cds.persistence.name": "REPORTS_TO",
+          "type": "cds.Integer"
+        },
+        "skill_set": {
+          "@cds.persistence.name": "SKILL_SET",
+          "type": "cds.String"
+        },
+        "ext_id": {
+          "@cds.persistence.name": "EXT_ID",
+          "type": "cds.String"
+        },
+        "name": {
+          "@cds.persistence.name": "NAME",
+          "type": "cds.String"
+        }
+      },
+      "$syntax": "projection"
+    },
+    "ExpertService_old.Team_members": {
+      "kind": "entity",
+      "@Capabilities.DeleteRestrictions.Deletable": false,
+      "@Capabilities.InsertRestrictions.Insertable": false,
+      "@Capabilities.UpdateRestrictions.Updatable": false,
+      "@cds.persistence.name": "EXPERTSERVICE_OLD_TEAM_MEMBERS",
       "@readonly": true,
       "query": {
         "SELECT": {
@@ -267,7 +332,7 @@
         "expert": {
           "@cds.persistence.name": "EXPERT",
           "type": "cds.Association",
-          "target": "ExpertService.Experts",
+          "target": "ExpertService_old.Experts",
           "keys": [
             {
               "ref": [
@@ -280,7 +345,7 @@
         "team": {
           "@cds.persistence.name": "TEAM",
           "type": "cds.Association",
-          "target": "ExpertService.Expert_teams",
+          "target": "ExpertService_old.Expert_teams",
           "keys": [
             {
               "ref": [
@@ -303,61 +368,60 @@
       },
       "$syntax": "projection"
     },
-    "my.wire.EXPERT": {
+    "TEAM_MEMBER": {
       "kind": "entity",
       "@cds.persistence.exists": true,
-      "@cds.persistence.name": "MY_WIRE_EXPERT",
+      "@cds.persistence.name": "TEAM_MEMBER",
       "elements": {
         "ID": {
           "@cds.persistence.name": "ID",
           "key": true,
           "type": "cds.Integer"
         },
-        "REPORTS_TO": {
-          "@cds.persistence.name": "REPORTS_TO",
+        "EXPERT": {
+          "@cds.persistence.name": "EXPERT",
+          "type": "cds.Association",
+          "target": "EXPERT",
+          "on": [
+            {
+              "ref": [
+                "EXPERT",
+                "ID"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "EXPERT_ID"
+              ]
+            }
+          ]
+        },
+        "TEAM": {
+          "@cds.persistence.name": "TEAM",
+          "type": "cds.Association",
+          "target": "EXPERT_TEAM",
+          "on": [
+            {
+              "ref": [
+                "TEAM",
+                "ID"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "TEAM_ID"
+              ]
+            }
+          ]
+        },
+        "EXPERT_ID": {
+          "@cds.persistence.name": "EXPERT_ID",
           "type": "cds.Integer"
         },
-        "SKILL_SET": {
-          "@cds.persistence.name": "SKILL_SET",
-          "type": "cds.String"
-        },
-        "EXT_ID": {
-          "@cds.persistence.name": "EXT_ID",
-          "type": "cds.String",
-          "length": 100
-        },
-        "NAME": {
-          "@cds.persistence.name": "NAME",
-          "type": "cds.String",
-          "length": 100
-        }
-      }
-    },
-    "my.wire.EXPERT_TEAM": {
-      "kind": "entity",
-      "@cds.persistence.exists": true,
-      "@cds.persistence.name": "MY_WIRE_EXPERT_TEAM",
-      "elements": {
-        "ID": {
-          "@cds.persistence.name": "ID",
-          "key": true,
-          "type": "cds.Integer"
-        },
-        "TEAM_NAME": {
-          "@cds.persistence.name": "TEAM_NAME",
-          "type": "cds.String",
-          "length": 200
-        },
-        "DESCRIPTION": {
-          "@cds.persistence.name": "DESCRIPTION",
-          "type": "cds.String"
-        },
-        "TEAM_LEAD": {
-          "@cds.persistence.name": "TEAM_LEAD",
-          "type": "cds.Integer"
-        },
-        "PARENT_TEAM": {
-          "@cds.persistence.name": "PARENT_TEAM",
+        "TEAM_ID": {
+          "@cds.persistence.name": "TEAM_ID",
           "type": "cds.Integer"
         }
       }
@@ -413,64 +477,6 @@
         "name": {
           "@cds.persistence.name": "NAME",
           "type": "cds.String"
-        }
-      }
-    },
-    "my.wire.TEAM_MEMBER": {
-      "kind": "entity",
-      "@cds.persistence.exists": true,
-      "@cds.persistence.name": "MY_WIRE_TEAM_MEMBER",
-      "elements": {
-        "ID": {
-          "@cds.persistence.name": "ID",
-          "key": true,
-          "type": "cds.Integer"
-        },
-        "EXPERT": {
-          "@cds.persistence.name": "EXPERT",
-          "type": "cds.Association",
-          "target": "my.wire.EXPERT",
-          "on": [
-            {
-              "ref": [
-                "EXPERT",
-                "ID"
-              ]
-            },
-            "=",
-            {
-              "ref": [
-                "EXPERT_ID"
-              ]
-            }
-          ]
-        },
-        "TEAM": {
-          "@cds.persistence.name": "TEAM",
-          "type": "cds.Association",
-          "target": "my.wire.EXPERT_TEAM",
-          "on": [
-            {
-              "ref": [
-                "TEAM",
-                "ID"
-              ]
-            },
-            "=",
-            {
-              "ref": [
-                "TEAM_ID"
-              ]
-            }
-          ]
-        },
-        "EXPERT_ID": {
-          "@cds.persistence.name": "EXPERT_ID",
-          "type": "cds.Integer"
-        },
-        "TEAM_ID": {
-          "@cds.persistence.name": "TEAM_ID",
-          "type": "cds.Integer"
         }
       }
     },

@@ -1,5 +1,5 @@
 ID: wire3
-_schema-version: "2.1"
+_schema-version: '2.1'
 version: 0.0.1
 modules:
   - name: wire3-db
@@ -18,41 +18,38 @@ modules:
     provides:
       - name: srv_api
         properties:
-          url: ${default-url}
+          url: '${default-url}'
     requires:
       - name: wire3-db-hdi-container
         properties:
-          JBP_CONFIG_RESOURCE_CONFIGURATION: '[tomcat/webapps/ROOT/META-INF/context.xml:
-            {"service_name_for_DefaultDB" : "~{hdi-container-name}"}]'
-
+          JBP_CONFIG_RESOURCE_CONFIGURATION: '[tomcat/webapps/ROOT/META-INF/context.xml: {"service_name_for_DefaultDB" : "~{hdi-container-name}"}]'
   - name: app
     type: html5
     path: app
     parameters:
-       disk-quota: 256M
-       memory: 256M
+      disk-quota: 256M
+      memory: 256M
     build-parameters:
-       builder: grunt
+      builder: grunt
     requires:
-     - name: srv_api
-       group: destinations
-       properties:
+      - name: srv_api
+        group: destinations
+        properties:
           forwardAuthToken: true
           strictSSL: false
           name: srv_api
-          url: ~{url}
-     - name: uaa_wire3
-
+          url: '~{url}'
+      - name: uaa_wire3
 resources:
   - name: wire3-db-hdi-container
     type: com.sap.xs.hdi-container
     properties:
-      hdi-container-name: ${service-name}
-
+      hdi-container-name: '${service-name}'
+    parameters:
+      service-name: wire3-hana-hdi
   - name: uaa_wire3
     parameters:
-       path: ./xs-security.json
-       service-plan: application
-       service: xsuaa
+      path: ./xs-security.json
+      service-plan: application
+      service: xsuaa
     type: org.cloudfoundry.managed-service
-
