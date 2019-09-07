@@ -28,7 +28,7 @@ public class ExpertService {
     public ReadResponse afterReadOrders(ReadRequest req, ReadResponseAccessor res, ExtensionHelper h) {
         EntityData ed = res.getEntityData();
         //EntityData ex = EntityData.getBuilder(ed).addElement("amount", 1000).buildEntityData("Experts");
-        EntityData ex = EntityData.getBuilder(ed).addElement("ext_id", "external id").buildEntityData(EXPERT_ENTITY);
+        EntityData ex = EntityData.getBuilder(ed).addElement("EXT_ID", "external id").buildEntityData(EXPERT_ENTITY);
         return ReadResponse.setSuccess().setData(ex).response();
     }
 
@@ -37,7 +37,7 @@ public class ExpertService {
         List<EntityData> dataList = res.getEntityDataList(); // original list
         List<EntityData> modifiedList = new ArrayList<EntityData>(dataList.size()); // modified list
         for (EntityData ed : dataList) {
-            EntityData ex = EntityData.getBuilder(ed).addElement("ext_id", "external id").buildEntityData(EXPERT_ENTITY);
+            EntityData ex = EntityData.getBuilder(ed).addElement("EXT_ID", "external id").buildEntityData(EXPERT_ENTITY);
             modifiedList.add(ex);
         }
         return QueryResponse.setSuccess().setData(modifiedList).response();
