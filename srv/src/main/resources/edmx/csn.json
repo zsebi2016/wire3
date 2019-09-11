@@ -60,6 +60,39 @@
         }
       }
     },
+    "EXPERT_WITH_TEAM": {
+      "kind": "entity",
+      "@cds.persistence.exists": true,
+      "@cds.persistence.name": "EXPERT_WITH_TEAM",
+      "elements": {
+        "NAME": {
+          "@cds.persistence.name": "NAME",
+          "type": "cds.String",
+          "length": 100
+        },
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "type": "cds.Integer"
+        },
+        "TEAM_ID": {
+          "@cds.persistence.name": "TEAM_ID",
+          "type": "cds.Integer"
+        },
+        "REPORTS_TO": {
+          "@cds.persistence.name": "REPORTS_TO",
+          "type": "cds.Integer"
+        },
+        "SKILL_SET": {
+          "@cds.persistence.name": "SKILL_SET",
+          "type": "cds.String"
+        },
+        "EXT_ID": {
+          "@cds.persistence.name": "EXT_ID",
+          "type": "cds.String",
+          "length": 100
+        }
+      }
+    },
     "ExpertService": {
       "kind": "service"
     },
@@ -277,6 +310,85 @@
         "TEAM_ID": {
           "@cds.persistence.name": "TEAM_ID",
           "type": "cds.Integer"
+        }
+      }
+    },
+    "TEAM_WITH_EXPERT": {
+      "kind": "entity",
+      "@cds.persistence.exists": true,
+      "@cds.persistence.name": "TEAM_WITH_EXPERT",
+      "elements": {
+        "TEAM_NAME": {
+          "@cds.persistence.name": "TEAM_NAME",
+          "type": "cds.String",
+          "length": 200
+        },
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "type": "cds.Integer"
+        },
+        "EXPERT_ID": {
+          "@cds.persistence.name": "EXPERT_ID",
+          "type": "cds.Integer"
+        },
+        "DESCRIPTION": {
+          "@cds.persistence.name": "DESCRIPTION",
+          "type": "cds.String"
+        },
+        "TEAM_LEAD": {
+          "@cds.persistence.name": "TEAM_LEAD",
+          "type": "cds.Integer"
+        },
+        "PARENT_TEAM": {
+          "@cds.persistence.name": "PARENT_TEAM",
+          "type": "cds.Integer"
+        }
+      }
+    },
+    "V_TEAM": {
+      "kind": "entity",
+      "@cds.persistence.exists": true,
+      "@cds.persistence.name": "V_TEAM",
+      "elements": {
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "type": "cds.Integer"
+        },
+        "TEAM_NAME": {
+          "@cds.persistence.name": "TEAM_NAME",
+          "type": "cds.String",
+          "length": 200
+        },
+        "DESCRIPTION": {
+          "@cds.persistence.name": "DESCRIPTION",
+          "type": "cds.String"
+        },
+        "TEAM_LEAD": {
+          "@cds.persistence.name": "TEAM_LEAD",
+          "type": "cds.Integer"
+        },
+        "PARENT_TEAM": {
+          "@cds.persistence.name": "PARENT_TEAM",
+          "type": "cds.Integer"
+        },
+        "E": {
+          "@cds.persistence.name": "E",
+          "type": "cds.Association",
+          "target": "EXPERT_WITH_TEAM",
+          "on": [
+            {
+              "ref": [
+                "ID"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "E",
+                "TEAM_ID"
+              ]
+            }
+          ]
         }
       }
     },
