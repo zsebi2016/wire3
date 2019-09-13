@@ -15,7 +15,7 @@ entity EXPERT_TEAM {
   DESCRIPTION : String;
   TEAM_LEAD : Integer;
   PARENT_TEAM : Integer;
-  EXPERTPLUS : association to many EXPERTPLUS ON ID = EXPERTPLUS.TEAM_ID;
+  EXPERTS : association to many EXPERT_WITH_TEAM ON ID = EXPERTS.TEAM_ID;
 }
 
 @cds.persistence.exists
@@ -55,7 +55,7 @@ entity V_TEAM {
   DESCRIPTION : String;
   TEAM_LEAD : Integer;
   PARENT_TEAM : Integer;
-  E : association to EXPERT_WITH_TEAM on ID = E.TEAM_ID;
+  EXPERTS : association to many EXPERT_WITH_TEAM on ID = EXPERTS.TEAM_ID;
 }
 
 @cds.persistence.exists
@@ -64,15 +64,15 @@ entity TEST_VIEW {
   TEAM_NAME : String;
 }
 
-@cds.persistence.exists
-Entity "EXPERTPLUS" {
-	key ID : Integer;
-	REPORTS_TO : Integer;
-	SKILL_SET: String;
-	EXT_ID : String(100);
-	NAME : String (100);
-	TEAM_ID : Integer;
-	EXPERT_ID : Integer;
-}
-
+/*@cds.persistence.exists
+*Entity "EXPERTPLUS" {
+*	key ID : Integer;
+*	REPORTS_TO : Integer;
+*	SKILL_SET: String;
+*	EXT_ID : String(100);
+*	NAME : String (100);
+*	TEAM_ID : Integer;
+*	EXPERT_ID : Integer;
+*}
+*/
 

@@ -31,44 +31,6 @@
         }
       }
     },
-    "EXPERTPLUS": {
-      "kind": "entity",
-      "@cds.persistence.exists": true,
-      "@cds.persistence.name": "EXPERTPLUS",
-      "elements": {
-        "ID": {
-          "@cds.persistence.name": "ID",
-          "key": true,
-          "type": "cds.Integer"
-        },
-        "REPORTS_TO": {
-          "@cds.persistence.name": "REPORTS_TO",
-          "type": "cds.Integer"
-        },
-        "SKILL_SET": {
-          "@cds.persistence.name": "SKILL_SET",
-          "type": "cds.String"
-        },
-        "EXT_ID": {
-          "@cds.persistence.name": "EXT_ID",
-          "type": "cds.String",
-          "length": 100
-        },
-        "NAME": {
-          "@cds.persistence.name": "NAME",
-          "type": "cds.String",
-          "length": 100
-        },
-        "TEAM_ID": {
-          "@cds.persistence.name": "TEAM_ID",
-          "type": "cds.Integer"
-        },
-        "EXPERT_ID": {
-          "@cds.persistence.name": "EXPERT_ID",
-          "type": "cds.Integer"
-        }
-      }
-    },
     "EXPERT_TEAM": {
       "kind": "entity",
       "@cds.persistence.exists": true,
@@ -96,13 +58,13 @@
           "@cds.persistence.name": "PARENT_TEAM",
           "type": "cds.Integer"
         },
-        "EXPERTPLUS": {
-          "@cds.persistence.name": "EXPERTPLUS",
+        "EXPERTS": {
+          "@cds.persistence.name": "EXPERTS",
           "type": "cds.Association",
           "cardinality": {
             "max": "*"
           },
-          "target": "EXPERTPLUS",
+          "target": "EXPERT_WITH_TEAM",
           "on": [
             {
               "ref": [
@@ -112,7 +74,7 @@
             "=",
             {
               "ref": [
-                "EXPERTPLUS",
+                "EXPERTS",
                 "TEAM_ID"
               ]
             }
@@ -252,57 +214,6 @@
       },
       "$syntax": "projection"
     },
-    "ExpertService.ExpertPlus": {
-      "kind": "entity",
-      "@Capabilities.DeleteRestrictions.Deletable": false,
-      "@Capabilities.InsertRestrictions.Insertable": false,
-      "@Capabilities.UpdateRestrictions.Updatable": false,
-      "@cds.persistence.name": "EXPERTSERVICE_EXPERTPLUS",
-      "@readonly": true,
-      "query": {
-        "SELECT": {
-          "from": {
-            "ref": [
-              "EXPERTPLUS"
-            ]
-          }
-        }
-      },
-      "elements": {
-        "ID": {
-          "@cds.persistence.name": "ID",
-          "key": true,
-          "type": "cds.Integer"
-        },
-        "REPORTS_TO": {
-          "@cds.persistence.name": "REPORTS_TO",
-          "type": "cds.Integer"
-        },
-        "SKILL_SET": {
-          "@cds.persistence.name": "SKILL_SET",
-          "type": "cds.String"
-        },
-        "EXT_ID": {
-          "@cds.persistence.name": "EXT_ID",
-          "type": "cds.String",
-          "length": 100
-        },
-        "NAME": {
-          "@cds.persistence.name": "NAME",
-          "type": "cds.String",
-          "length": 100
-        },
-        "TEAM_ID": {
-          "@cds.persistence.name": "TEAM_ID",
-          "type": "cds.Integer"
-        },
-        "EXPERT_ID": {
-          "@cds.persistence.name": "EXPERT_ID",
-          "type": "cds.Integer"
-        }
-      },
-      "$syntax": "projection"
-    },
     "ExpertService.Expert_team": {
       "kind": "entity",
       "@Capabilities.DeleteRestrictions.Deletable": false,
@@ -343,13 +254,13 @@
           "@cds.persistence.name": "PARENT_TEAM",
           "type": "cds.Integer"
         },
-        "EXPERTPLUS": {
-          "@cds.persistence.name": "EXPERTPLUS",
+        "EXPERTS": {
+          "@cds.persistence.name": "EXPERTS",
           "type": "cds.Association",
           "cardinality": {
             "max": "*"
           },
-          "target": "ExpertService.ExpertPlus",
+          "target": "ExpertService.ExpertExtra",
           "on": [
             {
               "ref": [
@@ -359,7 +270,7 @@
             "=",
             {
               "ref": [
-                "EXPERTPLUS",
+                "EXPERTS",
                 "TEAM_ID"
               ]
             }
@@ -507,9 +418,12 @@
           "@cds.persistence.name": "PARENT_TEAM",
           "type": "cds.Integer"
         },
-        "E": {
-          "@cds.persistence.name": "E",
+        "EXPERTS": {
+          "@cds.persistence.name": "EXPERTS",
           "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
           "target": "ExpertService.ExpertExtra",
           "on": [
             {
@@ -520,7 +434,7 @@
             "=",
             {
               "ref": [
-                "E",
+                "EXPERTS",
                 "TEAM_ID"
               ]
             }
@@ -661,9 +575,12 @@
           "@cds.persistence.name": "PARENT_TEAM",
           "type": "cds.Integer"
         },
-        "E": {
-          "@cds.persistence.name": "E",
+        "EXPERTS": {
+          "@cds.persistence.name": "EXPERTS",
           "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
           "target": "EXPERT_WITH_TEAM",
           "on": [
             {
@@ -674,7 +591,7 @@
             "=",
             {
               "ref": [
-                "E",
+                "EXPERTS",
                 "TEAM_ID"
               ]
             }

@@ -8,14 +8,13 @@
       <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
         <EntitySet Name="Expert" EntityType="ExpertService.Expert"/>
         <EntitySet Name="ExpertExtra" EntityType="ExpertService.ExpertExtra"/>
-        <EntitySet Name="ExpertPlus" EntityType="ExpertService.ExpertPlus"/>
         <EntitySet Name="Expert_team" EntityType="ExpertService.Expert_team"/>
         <EntitySet Name="Team_member" EntityType="ExpertService.Team_member"/>
         <EntitySet Name="Test2" EntityType="ExpertService.Test2"/>
         <EntitySet Name="V_Team" EntityType="ExpertService.V_Team"/>
-        <AssociationSet Name="Expert_team_EXPERTPLUS" Association="ExpertService.Expert_team_EXPERTPLUS">
+        <AssociationSet Name="Expert_team_EXPERTS" Association="ExpertService.Expert_team_EXPERTS">
           <End Role="Expert_team" EntitySet="Expert_team"/>
-          <End Role="ExpertPlus" EntitySet="ExpertPlus"/>
+          <End Role="ExpertExtra" EntitySet="ExpertExtra"/>
         </AssociationSet>
         <AssociationSet Name="Team_member_EXPERT" Association="ExpertService.Team_member_EXPERT">
           <End Role="Team_member" EntitySet="Team_member"/>
@@ -25,7 +24,7 @@
           <End Role="Team_member" EntitySet="Team_member"/>
           <End Role="Expert_team" EntitySet="Expert_team"/>
         </AssociationSet>
-        <AssociationSet Name="V_Team_E" Association="ExpertService.V_Team_E">
+        <AssociationSet Name="V_Team_EXPERTS" Association="ExpertService.V_Team_EXPERTS">
           <End Role="V_Team" EntitySet="V_Team"/>
           <End Role="ExpertExtra" EntitySet="ExpertExtra"/>
         </AssociationSet>
@@ -52,18 +51,6 @@
         <Property Name="SKILL_SET" Type="Edm.String"/>
         <Property Name="EXT_ID" Type="Edm.String"/>
       </EntityType>
-      <EntityType Name="ExpertPlus">
-        <Key>
-          <PropertyRef Name="ID"/>
-        </Key>
-        <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
-        <Property Name="REPORTS_TO" Type="Edm.Int32"/>
-        <Property Name="SKILL_SET" Type="Edm.String"/>
-        <Property Name="EXT_ID" Type="Edm.String" MaxLength="100"/>
-        <Property Name="NAME" Type="Edm.String" MaxLength="100"/>
-        <Property Name="TEAM_ID" Type="Edm.Int32"/>
-        <Property Name="EXPERT_ID" Type="Edm.Int32"/>
-      </EntityType>
       <EntityType Name="Expert_team">
         <Key>
           <PropertyRef Name="ID"/>
@@ -73,7 +60,7 @@
         <Property Name="DESCRIPTION" Type="Edm.String"/>
         <Property Name="TEAM_LEAD" Type="Edm.Int32"/>
         <Property Name="PARENT_TEAM" Type="Edm.Int32"/>
-        <NavigationProperty Name="EXPERTPLUS" Relationship="ExpertService.Expert_team_EXPERTPLUS" FromRole="Expert_team" ToRole="ExpertPlus"/>
+        <NavigationProperty Name="EXPERTS" Relationship="ExpertService.Expert_team_EXPERTS" FromRole="Expert_team" ToRole="ExpertExtra"/>
       </EntityType>
       <EntityType Name="Team_member">
         <Key>
@@ -101,11 +88,11 @@
         <Property Name="DESCRIPTION" Type="Edm.String"/>
         <Property Name="TEAM_LEAD" Type="Edm.Int32"/>
         <Property Name="PARENT_TEAM" Type="Edm.Int32"/>
-        <NavigationProperty Name="E" Relationship="ExpertService.V_Team_E" FromRole="V_Team" ToRole="ExpertExtra"/>
+        <NavigationProperty Name="EXPERTS" Relationship="ExpertService.V_Team_EXPERTS" FromRole="V_Team" ToRole="ExpertExtra"/>
       </EntityType>
-      <Association Name="Expert_team_EXPERTPLUS">
+      <Association Name="Expert_team_EXPERTS">
         <End Role="Expert_team" Type="ExpertService.Expert_team" Multiplicity="*"/>
-        <End Role="ExpertPlus" Type="ExpertService.ExpertPlus" Multiplicity="*"/>
+        <End Role="ExpertExtra" Type="ExpertService.ExpertExtra" Multiplicity="*"/>
       </Association>
       <Association Name="Team_member_EXPERT">
         <End Role="Team_member" Type="ExpertService.Team_member" Multiplicity="*"/>
@@ -131,9 +118,9 @@
           </Dependent>
         </ReferentialConstraint>
       </Association>
-      <Association Name="V_Team_E">
+      <Association Name="V_Team_EXPERTS">
         <End Role="V_Team" Type="ExpertService.V_Team" Multiplicity="*"/>
-        <End Role="ExpertExtra" Type="ExpertService.ExpertExtra" Multiplicity="0..1"/>
+        <End Role="ExpertExtra" Type="ExpertService.ExpertExtra" Multiplicity="*"/>
       </Association>
       <Annotations Target="ExpertService.EntityContainer/Expert" xmlns="http://docs.oasis-open.org/odata/ns/edm">
         <Annotation Term="Capabilities.DeleteRestrictions">
@@ -153,23 +140,6 @@
         </Annotation>
       </Annotations>
       <Annotations Target="ExpertService.EntityContainer/ExpertExtra" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-        <Annotation Term="Capabilities.DeleteRestrictions">
-          <Record Type="Capabilities.DeleteRestrictionsType">
-            <PropertyValue Property="Deletable" Bool="false"/>
-          </Record>
-        </Annotation>
-        <Annotation Term="Capabilities.InsertRestrictions">
-          <Record Type="Capabilities.InsertRestrictionsType">
-            <PropertyValue Property="Insertable" Bool="false"/>
-          </Record>
-        </Annotation>
-        <Annotation Term="Capabilities.UpdateRestrictions">
-          <Record Type="Capabilities.UpdateRestrictionsType">
-            <PropertyValue Property="Updatable" Bool="false"/>
-          </Record>
-        </Annotation>
-      </Annotations>
-      <Annotations Target="ExpertService.EntityContainer/ExpertPlus" xmlns="http://docs.oasis-open.org/odata/ns/edm">
         <Annotation Term="Capabilities.DeleteRestrictions">
           <Record Type="Capabilities.DeleteRestrictionsType">
             <PropertyValue Property="Deletable" Bool="false"/>
