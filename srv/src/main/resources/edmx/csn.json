@@ -28,6 +28,61 @@
           "@cds.persistence.name": "NAME",
           "type": "cds.String",
           "length": 100
+        },
+        "FIRSTNAME": {
+          "@cds.persistence.name": "FIRSTNAME",
+          "type": "cds.String",
+          "length": 100
+        },
+        "LASTNAME": {
+          "@cds.persistence.name": "LASTNAME",
+          "type": "cds.String",
+          "length": 100
+        },
+        "TITLE": {
+          "@cds.persistence.name": "TITLE",
+          "type": "cds.String",
+          "length": 100
+        },
+        "EMAIL": {
+          "@cds.persistence.name": "EMAIL",
+          "type": "cds.String",
+          "length": 100
+        },
+        "DEPARTMENT": {
+          "@cds.persistence.name": "DEPARTMENT",
+          "type": "cds.String",
+          "length": 100
+        },
+        "JOBCODE": {
+          "@cds.persistence.name": "JOBCODE",
+          "type": "cds.String",
+          "length": 100
+        },
+        "DIVISION": {
+          "@cds.persistence.name": "DIVISION",
+          "type": "cds.String",
+          "length": 100
+        },
+        "LOCATION": {
+          "@cds.persistence.name": "LOCATION",
+          "type": "cds.String",
+          "length": 100
+        },
+        "CITY": {
+          "@cds.persistence.name": "CITY",
+          "type": "cds.String",
+          "length": 100
+        },
+        "COUNTRY": {
+          "@cds.persistence.name": "COUNTRY",
+          "type": "cds.String",
+          "length": 100
+        },
+        "SOURCE": {
+          "@cds.persistence.name": "SOURCE",
+          "type": "cds.String",
+          "length": 10
         }
       }
     },
@@ -57,6 +112,11 @@
         "PARENT_TEAM": {
           "@cds.persistence.name": "PARENT_TEAM",
           "type": "cds.Integer"
+        },
+        "SOURCE": {
+          "@cds.persistence.name": "SOURCE",
+          "type": "cds.String",
+          "length": 10
         },
         "EXPERTS": {
           "@cds.persistence.name": "EXPERTS",
@@ -119,7 +179,8 @@
       }
     },
     "ExpertService": {
-      "kind": "service"
+      "kind": "service",
+      "@source": "srv/expert-service.cds"
     },
     "ExpertService.Expert": {
       "kind": "entity",
@@ -161,6 +222,61 @@
           "@cds.persistence.name": "NAME",
           "type": "cds.String",
           "length": 100
+        },
+        "FIRSTNAME": {
+          "@cds.persistence.name": "FIRSTNAME",
+          "type": "cds.String",
+          "length": 100
+        },
+        "LASTNAME": {
+          "@cds.persistence.name": "LASTNAME",
+          "type": "cds.String",
+          "length": 100
+        },
+        "TITLE": {
+          "@cds.persistence.name": "TITLE",
+          "type": "cds.String",
+          "length": 100
+        },
+        "EMAIL": {
+          "@cds.persistence.name": "EMAIL",
+          "type": "cds.String",
+          "length": 100
+        },
+        "DEPARTMENT": {
+          "@cds.persistence.name": "DEPARTMENT",
+          "type": "cds.String",
+          "length": 100
+        },
+        "JOBCODE": {
+          "@cds.persistence.name": "JOBCODE",
+          "type": "cds.String",
+          "length": 100
+        },
+        "DIVISION": {
+          "@cds.persistence.name": "DIVISION",
+          "type": "cds.String",
+          "length": 100
+        },
+        "LOCATION": {
+          "@cds.persistence.name": "LOCATION",
+          "type": "cds.String",
+          "length": 100
+        },
+        "CITY": {
+          "@cds.persistence.name": "CITY",
+          "type": "cds.String",
+          "length": 100
+        },
+        "COUNTRY": {
+          "@cds.persistence.name": "COUNTRY",
+          "type": "cds.String",
+          "length": 100
+        },
+        "SOURCE": {
+          "@cds.persistence.name": "SOURCE",
+          "type": "cds.String",
+          "length": 10
         }
       },
       "$syntax": "projection"
@@ -253,6 +369,11 @@
         "PARENT_TEAM": {
           "@cds.persistence.name": "PARENT_TEAM",
           "type": "cds.Integer"
+        },
+        "SOURCE": {
+          "@cds.persistence.name": "SOURCE",
+          "type": "cds.String",
+          "length": 10
         },
         "EXPERTS": {
           "@cds.persistence.name": "EXPERTS",
@@ -705,7 +826,7 @@
     "csn": "1.0"
   },
   "meta": {
-    "creator": "CDS Compiler v1.17.2"
+    "creator": "CDS Compiler v1.18.2"
   },
   "$version": "1.0",
   "@sql_mapping": "plain"

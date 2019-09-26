@@ -38,6 +38,17 @@
         <Property Name="SKILL_SET" Type="Edm.String"/>
         <Property Name="EXT_ID" Type="Edm.String" MaxLength="100"/>
         <Property Name="NAME" Type="Edm.String" MaxLength="100"/>
+        <Property Name="FIRSTNAME" Type="Edm.String" MaxLength="100"/>
+        <Property Name="LASTNAME" Type="Edm.String" MaxLength="100"/>
+        <Property Name="TITLE" Type="Edm.String" MaxLength="100"/>
+        <Property Name="EMAIL" Type="Edm.String" MaxLength="100"/>
+        <Property Name="DEPARTMENT" Type="Edm.String" MaxLength="100"/>
+        <Property Name="JOBCODE" Type="Edm.String" MaxLength="100"/>
+        <Property Name="DIVISION" Type="Edm.String" MaxLength="100"/>
+        <Property Name="LOCATION" Type="Edm.String" MaxLength="100"/>
+        <Property Name="CITY" Type="Edm.String" MaxLength="100"/>
+        <Property Name="COUNTRY" Type="Edm.String" MaxLength="100"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
       </EntityType>
       <EntityType Name="ExpertExtra">
         <Key>
@@ -60,6 +71,7 @@
         <Property Name="DESCRIPTION" Type="Edm.String"/>
         <Property Name="TEAM_LEAD" Type="Edm.Int32"/>
         <Property Name="PARENT_TEAM" Type="Edm.Int32"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
         <NavigationProperty Name="EXPERTS" Relationship="ExpertService.Expert_team_EXPERTS" FromRole="Expert_team" ToRole="ExpertExtra"/>
       </EntityType>
       <EntityType Name="Team_member">

@@ -6,6 +6,17 @@ Entity EXPERT {
 	SKILL_SET: String;
 	EXT_ID : String(100);
 	NAME : String (100);
+	FIRSTNAME : String(100);
+	LASTNAME : String(100);
+	TITLE : String(100);
+	EMAIL : String(100);
+	DEPARTMENT : String(100);
+	JOBCODE : String(100);
+	DIVISION : String(100);
+	LOCATION : String(100);
+	CITY : String(100);
+	COUNTRY : String(100);
+	SOURCE : String(10);
 }
 
 @cds.persistence.exists
@@ -15,6 +26,7 @@ entity EXPERT_TEAM {
   DESCRIPTION : String;
   TEAM_LEAD : Integer;
   PARENT_TEAM : Integer;
+  SOURCE : String(10);
   EXPERTS : association to many EXPERT_WITH_TEAM ON ID = EXPERTS.TEAM_ID;
 }
 
