@@ -1,102 +1,338 @@
-ID;TEAM_NAME;DESCRIPTION;TEAM_LEAD;PARENT_TEAM
-100001;Dynatrace;Cloud infrastructure monitoring using Dynatrace;100001;100001
-100002;HTML;HTML Development;100001;100001
-100003;HTML5 Development;Be able to develop with HTML5;100002;100002
-100004;Jupiter;Development environment for Python based Machine Learning framework;100003;100003
-100005;Maven;Development Build automation based on Maven tool;100004;100004
-100006;Mongo DB;Database usage of Mongo DB;100005;100005
-100007;Network Programming;Client / Server Network Socket Programming and TCP Protocols;100006;100006
-100008;Pipeline Tools for Cloud Applications;Jenkins, xMake, GIT, Gerrit, etc.;100007;100007
-100009;Product Manager;Is responsible for roll-in of requirements, creation of  value-based presentations, demos and publications to customers, user groups and partners.;100008;100008
-100010;Product Owner;Knowledge and Experience as Product Owner;100009;100009
-100011;Protractor;Set-up and configuration of  Protractor Testsuite;100010;100010
-100012;Proxy Programming;Development of dedicated and generic proxy solutions;100011;100011
-100013;Release Engineering;Technical package builds and release of software across environments. ;100012;100012
-100014;Replication Technologies;PI, Postbox, CPI, MidServer, RFC;100013;100013
-100015;Ruby/Rails;DevOps automation and web development;100014;100014
-100016;SAP Kernel�;SAP Kernel Development and Analysis�of Kernel Components ( SAP NI, Gateway, RFC, SAPRouter, ICM etc );100015;100015
-100017;Scrum Master;Knowledge and Experience as Scrum Master;100011;100011
-100018;Software Developer;Realizes business requirements and provides solutions via coding, provides test cases and raw documentation;100009;100009
-100019;Software Quality Management ;Ensures availability of test systems, coordinates test planning, availability of test scripts, ensures test automation, manages quality gates and solution validation, responsible for product standard compliance;100003;100003
-100020;Sonar;Test automation based on Sonar framework;100013;100013
-100021;Splunk;Use of Log-, Monitoring- and Reporting-Tool Splunk;100008;100008
-100022;System Landscape Operations;"Safeguard system availability and performance for development environment; upgrade of system, test data, security";100004;100004
-100023;TensorFlow;Development based on Google Machine Learning API;100004;100004
-100024;User Assistance;Writes documentation, user guides, value help, SAP Help Portal content, built in documentation, �;100004;100004
-100025;UX (User Experience);Responsible for User Experience: research, collect customer feedback and requirements, write user stories;100006;100006
-100026;X509 Certificate Technology;Publikc Key Infrastructure, Server Certificates, User Certificates;100001;100001
-100027;360 Degree System Health Check;360 Degree System Health Check;100005;100005
-100028;Application Lifecycle Management (ALM);Understand how Application Lifecycle Management is done / explained / setup;100001;100001
-100029;Backoffice (Remote Support);Remote Support in Backoffice;100002;100002
-100030;Deployment Support;Support innovation adoption;100011;100011
-100031;E2E Value Management;Creation of Value Bridge. Positioning of Value Base Innovation Roadmap, KPIs and Four Panel;100002;100002
-100032;Enterprise Support Advisor;Advisors delivering Enterprise Support ;100001;100001
-100033;Escalation Manager;"Resolving top issues or administrative activities for a specific customer escalation; escalation management";100001;100001
-100034;ICC (Innovation Control Center);Understand how an Innovation Control Center is working / explained / setup;100010;100010
-100035;MCC Analyst;MCC Engagement Support (e.g. Risk Management, PERC Review, Report Review, Scheduled BO duty);100011;100011
-100036;Mission Critical Support;Mission Critical Support (e.g. Incident Escalation Management);100009;100009
-100037;Presales Support;Opportunity Solutioning & Orchestration, Presales Support;100005;100005
-100038;PSLE Advisor;PSLE contact for large customer;100014;100014
-100039;runSAP (Operation Control Center);Understand how Operation Control Centers are working / explained / setup;100013;100013
-100040;Serv. Prep. Healthcheck;Serv. Prep. Healthcheck;100008;100008
-100041;Service and Infrastructure Developer;Service development;100001;100001
-100042;Solutioning - PE;Solutioning for PE Deals;100003;100003
-100043;Solutioning - PS;Solutioning for Services Deals;100009;100009
-100044;Strategic Support Engagement;Drive SAP ES&/or PE customer engagements - focusing on core engagement deliverables that support: Customer Success, Mission Critical Support, Empowernment, Collaboration, Proactive Guidance;100012;100012
+ID;TEAM_NAME;DESCRIPTION;TEAM_LEAD;PARENT_TEAM;SOURCE
+100001;Dynatrace;Cloud infrastructure monitoring using Dynatrace;100001;100001;
+100002;HTML;HTML Development;100001;100001;
+100003;HTML5 Development;Be able to develop with HTML5;100002;100002;
+100004;Jupiter;Development environment for Python based Machine Learning framework;100003;100003;
+100005;Maven;Development Build automation based on Maven tool;100004;100004;
+100006;Mongo DB;Database usage of Mongo DB;100005;100005;
+100007;Network Programming;Client / Server Network Socket Programming and TCP Protocols;100006;100006;
+100008;Pipeline Tools for Cloud Applications;Jenkins, xMake, GIT, Gerrit, etc.;100007;100007;
+100009;Product Manager;Is responsible for roll-in of requirements, creation of  value-based presentations, demos and publications to customers, user groups and partners.;100008;100008;
+100010;Product Owner;Knowledge and Experience as Product Owner;100009;100009;
+100011;Protractor;Set-up and configuration of  Protractor Testsuite;100010;100010;
+100012;Proxy Programming;Development of dedicated and generic proxy solutions;100011;100011;
+100013;Release Engineering;Technical package builds and release of software across environments. ;100012;100012;
+100014;Replication Technologies;PI, Postbox, CPI, MidServer, RFC;100013;100013;
+100015;Ruby/Rails;DevOps automation and web development;100014;100014;
+100016;SAP Kernel;SAP Kernel Development and Analysisof Kernel Components ( SAP NI, Gateway, RFC, SAPRouter, ICM etc );100015;100015;
+100017;Scrum Master;Knowledge and Experience as Scrum Master;100011;100011;
+100018;Software Developer;Realizes business requirements and provides solutions via coding, provides test cases and raw documentation;100009;100009;
+100019;Software Quality Management ;Ensures availability of test systems, coordinates test planning, availability of test scripts, ensures test automation, manages quality gates and solution validation, responsible for product standard compliance;100003;100003;
+100020;Sonar;Test automation based on Sonar framework;100013;100013;
+100021;Splunk;Use of Log-, Monitoring- and Reporting-Tool Splunk;100008;100008;
+100022;System Landscape Operations;"Safeguard system availability and performance for development environment; upgrade of system, test data, security";100004;100004;
+100023;TensorFlow;Development based on Google Machine Learning API;100004;100004;
+100024;User Assistance;Writes documentation, user guides, value help, SAP Help Portal content, built in documentation, ;100004;100004;
+100025;UX (User Experience);Responsible for User Experience: research, collect customer feedback and requirements, write user stories;100006;100006;
+100026;X509 Certificate Technology;Publikc Key Infrastructure, Server Certificates, User Certificates;100001;100001;
+100027;360 Degree System Health Check;360 Degree System Health Check;100005;100005;
+100028;Application Lifecycle Management (ALM);Understand how Application Lifecycle Management is done / explained / setup;100001;100001;
+100029;Backoffice (Remote Support);Remote Support in Backoffice;100002;100002;
+100030;Deployment Support;Support innovation adoption;100011;100011;
+100031;E2E Value Management;Creation of Value Bridge. Positioning of Value Base Innovation Roadmap, KPIs and Four Panel;100002;100002;
+100032;Enterprise Support Advisor;Advisors delivering Enterprise Support ;100001;100001;
+100033;Escalation Manager;"Resolving top issues or administrative activities for a specific customer escalation; escalation management";100001;100001;
+100034;ICC (Innovation Control Center);Understand how an Innovation Control Center is working / explained / setup;100010;100010;
+100035;MCC Analyst;MCC Engagement Support (e.g. Risk Management, PERC Review, Report Review, Scheduled BO duty);100011;100011;
+100036;Mission Critical Support;Mission Critical Support (e.g. Incident Escalation Management);100009;100009;
+100037;Presales Support;Opportunity Solutioning & Orchestration, Presales Support;100005;100005;
+100038;PSLE Advisor;PSLE contact for large customer;100014;100014;
+100039;runSAP (Operation Control Center);Understand how Operation Control Centers are working / explained / setup;100013;100013;
+100040;Serv. Prep. Healthcheck;Serv. Prep. Healthcheck;100008;100008;
+100041;Service and Infrastructure Developer;Service development;100001;100001;
+100042;Solutioning - PE;Solutioning for PE Deals;100003;100003;
+100043;Solutioning - PS;Solutioning for Services Deals;100009;100009;
+100044;Strategic Support Engagement;Drive SAP ES&/or PE customer engagements - focusing on core engagement deliverables that support: Customer Success, Mission Critical Support, Empowernment, Collaboration, Proactive Guidance;100012;100012;
 100045;Data Center & Server Infrastructure Integration;"Data Center: Transition acquired company data center infrastructure to SAP infrastructure and facilities.
-Server: Focus is on transitioning servers that support the acquired company business to SAP infrastructure.";100008;100008
-100046;Data Modeling;Data Modeling;100013;100013
-100047;Data Movement Modeling;Data Movement Modeling;100009;100009
-100048;Data Volume Management;Archiving, Data Retention and Deletion, Information Lifecycle Management;100002;100002
-100049;Development;Development;100008;100008
-100050;HANA Operations;Operate HANA specific modules (e.g. , XSA, SDA);100002;100002
-100051;Health Check;Health Check;100007;100007
-100052;Hybrid Operation;Operate hybrid solutions and provide frameworks/tools (parallel operation of SaaS and onPrem solutions);100004;100004
-100053;IaaS Cloud Delivery Management;IaaS Cloud Architecture and Enablement, Cost and Resource Management;100007;100007
-100054;Installation;Installation;100006;100006
-100055;Integration & Orchestration;Integration & Orchestration (e.g. PI, Cloud Connector, SLT);100001;100001
-100056;JAVA Development;JAVA Development;100010;100010
-100057;Knowledge Management Tools ;Maintain and operate solutions like WiKi, SAP Jam, MS Teams, Slack, �;100004;100004
-100058;Load Test Set-Up and Execution;Develop and execute load test scenarios (e.g. HP Loadrunner);100001;100001
-100059;Migration;Migration (OS, Database, Cloud);100008;100008
-100060;Migration Coaching;Migration Coaching;100014;100014
-100061;Migration Planning;Migration Planning;100003;100003
-100062;Migration Review / Evaluation;Migration Review / Evaluation;100005;100005
-100063;Mobile Use-Case: Config & Implementation;Mobile Use-Case: Config & Implementation;100005;100005
-100064;Network Infrastructure Integration;Deploy the SAP network to acquired company locations.;100004;100004
-100065;Operations Concepts;Design and support of Operations Concepts;100011;100011
-100066;Optimization;Optimization of technical system landscapes;100009;100009
-100067;Performance Measurement and Optimization;Performance measurements, RCA, technical optimization of SAP systems and HANA DB;100014;100014
-100068;Platform Development (DevOps);Automation, DevOps and testing (GitHub, Jenkins, HoneyComb);100003;100003
-100069;Project Review Technical;Project Review Technical;100014;100014
-100070;Quality Assurance;Quality Assurance of technology projects / landscapes;100002;100002
-100071;RealTime Replication;RealTime Replication;100002;100002
-100072;Release planning & execution;Release Management including planning, scheduling, and technical execution;100009;100009
-100073;Replication Architecture;Replication Architecture;100007;100007
-100074;Replication Scenarios (Publish);Plan, manage, configure Publish/Subscribe scenarios, monitor for performance;100002;100002
-100075;Replication Scenarios (Warm Standby);Plan, manage, configure Warm Standby instances, monitor for performance;100007;100007
-100076;Roles, Authorizations & User Mgmt;Roles, Authorizations & User Mgmt;100009;100009
-100077;SAP Cloud Platform Services;Operate services on SAP Cloud Platform (e.g Deployment..);100008;100008
-100078;Scripting Languages;Scipting Lanagues like Phython, Ruby, Perl, Java Script, UI5, Bash, Shell;100013;100013
-100079;Security Compliance;Ensure Security compliance of System Landscapes (e.g OS, Database..);100005;100005
-100080;Security Concept;Design and support of Security Concepts;100011;100011
-100081;Sizing;Sizing;100014;100014
-100082;SLO Analysis Execution;SLO Analysis Execution;100004;100004
-100083;SLO Tool Implementation and Execution;SLO Tool Implementation and Execution;100008;100008
-100084;SQL Development;SQL Development;100009;100009
-100085;System Copy;System Copy;100005;100005
-100086;System Setup;Setup of Systemlandscapes;100013;100013
-100087;System Upgrade;Version upgrades of SAP systems, databases, etc.;100001;100001
-100088;Technical Architecture;Technical Architecture;100006;100006
-100089;Technical Change Management;Technical Change Management;100005;100005
-100090;Technical Conception;Technical Conception;100006;100006
-100091;Technical Implementation;Technical Implementation;100005;100005
-100092;Transformation Blueprint Creation;Transformation Blueprint Creation;100007;100007
-100093;UI5 Development;UI5 Development / Fiori Development;100013;100013
-100094;UML Modelling;UML Modelling;100012;100012
-100095;Unicode Handling;Unicode Handling;100003;100003
-100096;Unicode MDMP Handling;Unicode MDMP Handling;100003;100003
-100097;Upgrade and EHP Planning;Upgrade and EHP Planning;100010;100010
-100098;VBS Scripting;VBS Scripting;100005;100005
-100099;Shaun �;Strategic Enablement, IT Engagement, IT Consulting;100004;100004
-100100;Elfreda �;IT devices & services, personal equipment (Windows & Mac), supporting services prourement, software licensing and email migration.;100006;100006
+Server: Focus is on transitioning servers that support the acquired company business to SAP infrastructure.";100008;100008;
+100046;Data Modeling;Data Modeling;100013;100013;
+100047;Data Movement Modeling;Data Movement Modeling;100009;100009;
+100048;Data Volume Management;Archiving, Data Retention and Deletion, Information Lifecycle Management;100002;100002;
+100049;Development;Development;100008;100008;
+100050;HANA Operations;Operate HANA specific modules (e.g. , XSA, SDA);100002;100002;
+100051;Health Check;Health Check;100007;100007;
+100052;Hybrid Operation;Operate hybrid solutions and provide frameworks/tools (parallel operation of SaaS and onPrem solutions);100004;100004;
+100053;IaaS Cloud Delivery Management;IaaS Cloud Architecture and Enablement, Cost and Resource Management;100007;100007;
+100054;Installation;Installation;100006;100006;
+100055;Integration & Orchestration;Integration & Orchestration (e.g. PI, Cloud Connector, SLT);100001;100001;
+100056;JAVA Development;JAVA Development;100010;100010;
+100057;Knowledge Management Tools ;Maintain and operate solutions like WiKi, SAP Jam, MS Teams, Slack, ;100004;100004;
+100058;Load Test Set-Up and Execution;Develop and execute load test scenarios (e.g. HP Loadrunner);100001;100001;
+100059;Migration;Migration (OS, Database, Cloud);100008;100008;
+100060;Migration Coaching;Migration Coaching;100014;100014;
+100061;Migration Planning;Migration Planning;100003;100003;
+100062;Migration Review / Evaluation;Migration Review / Evaluation;100005;100005;
+100063;Mobile Use-Case: Config & Implementation;Mobile Use-Case: Config & Implementation;100005;100005;
+100064;Network Infrastructure Integration;Deploy the SAP network to acquired company locations.;100004;100004;
+100065;Operations Concepts;Design and support of Operations Concepts;100011;100011;
+100066;Optimization;Optimization of technical system landscapes;100009;100009;
+100067;Performance Measurement and Optimization;Performance measurements, RCA, technical optimization of SAP systems and HANA DB;100014;100014;
+100068;Platform Development (DevOps);Automation, DevOps and testing (GitHub, Jenkins, HoneyComb);100003;100003;
+100069;Project Review Technical;Project Review Technical;100014;100014;
+100070;Quality Assurance;Quality Assurance of technology projects / landscapes;100002;100002;
+100071;RealTime Replication;RealTime Replication;100002;100002;
+100072;Release planning & execution;Release Management including planning, scheduling, and technical execution;100009;100009;
+100073;Replication Architecture;Replication Architecture;100007;100007;
+100074;Replication Scenarios (Publish);Plan, manage, configure Publish/Subscribe scenarios, monitor for performance;100002;100002;
+100075;Replication Scenarios (Warm Standby);Plan, manage, configure Warm Standby instances, monitor for performance;100007;100007;
+100076;Roles, Authorizations & User Mgmt;Roles, Authorizations & User Mgmt;100009;100009;
+100077;SAP Cloud Platform Services;Operate services on SAP Cloud Platform (e.g Deployment..);100008;100008;
+100078;Scripting Languages;Scipting Lanagues like Phython, Ruby, Perl, Java Script, UI5, Bash, Shell;100013;100013;
+100079;Security Compliance;Ensure Security compliance of System Landscapes (e.g OS, Database..);100005;100005;
+100080;Security Concept;Design and support of Security Concepts;100011;100011;
+100081;Sizing;Sizing;100014;100014;
+100082;SLO Analysis Execution;SLO Analysis Execution;100004;100004;
+100083;SLO Tool Implementation and Execution;SLO Tool Implementation and Execution;100008;100008;
+100084;SQL Development;SQL Development;100009;100009;
+100085;System Copy;System Copy;100005;100005;
+100086;System Setup;Setup of Systemlandscapes;100013;100013;
+100087;System Upgrade;Version upgrades of SAP systems, databases, etc.;100001;100001;
+100088;Technical Architecture;Technical Architecture;100006;100006;
+100089;Technical Change Management;Technical Change Management;100005;100005;
+100090;Technical Conception;Technical Conception;100006;100006;
+100091;Technical Implementation;Technical Implementation;100005;100005;
+100092;Transformation Blueprint Creation;Transformation Blueprint Creation;100007;100007;
+100093;UI5 Development;UI5 Development / Fiori Development;100013;100013;
+100094;UML Modelling;UML Modelling;100012;100012;
+100095;Unicode Handling;Unicode Handling;100003;100003;
+100096;Unicode MDMP Handling;Unicode MDMP Handling;100003;100003;
+100097;Upgrade and EHP Planning;Upgrade and EHP Planning;100010;100010;
+100098;VBS Scripting;VBS Scripting;100005;100005;
+100099;Shaun ;Strategic Enablement, IT Engagement, IT Consulting;100004;100004;
+100100;Elfreda;IT devices & services, personal equipment (Windows & Mac), supporting services prourement, software licensing and email migration.;100006;100006;
+50000074;Engineering;Engineering;;;SF_SD4
+50000724;Operations;Operations;;;SF_SD4
+50011876;Executive Support;Executive Support;;;SF_SD4
+50012557;Consulting/Analyst;Consulting/Analyst;;;SF_SD4
+50029022;Administration;Administration;;;SF_SD4
+50029026;Executive Management;Executive Management;;;SF_SD4
+50029122;HR Professional;HR Professional;;;SF_SD4
+50029129;Specialist;Specialist;;;SF_SD4
+50070923;Lawyer;Lawyer;;;SF_SD4
+50070965;Planning;Planning;;;SF_SD4
+50070967;Sales;Sales;;;SF_SD4
+50070968;Administrative Support;Administrative Support;;;SF_SD4
+50070970;Professional;Professional;;;SF_SD4
+50070999;Management & Planning;Management & Planning;;;SF_SD4
+50071000;Executive Management;Executive Management;;;SF_SD4
+50071001;Craft Workers;Craft Workers;;;SF_SD4
+50130011;Production FR;Production FR;;;SF_SD4
+50150001;Human Resources US;Human Resources US;;;SF_SD4
+50012007;Employee Development;Employee Development;;;SF_SD4
+50150013;Quality Assurance US;Quality Assurance US;;;SF_SD4
+50100010;Operations CN;Operations CN;;;SF_SD4
+50110011;Production AU;Production AU;;;SF_SD4
+50007753;Operations US;Operations US;;;SF_SD4
+50150011;Production US;Production US;;;SF_SD4
+300;Leadership Team BestRun;Leadership Team BestRun;;;SF_SD4
+50007730;Total Rewards;Total Rewards;;;SF_SD4
+50160011;Production BR;Production BR;;;SF_SD4
+50171015;Information Technology BR;Information Technology BR;;;SF_SD4
+50200001;Leadership Team EMEA;Leadership Team EMEA;;;SF_SD4
+50120015;Engineering UK;Engineering UK;;;SF_SD4
+50120006;Talent Acquisition UK;Talent Acquisition UK;;;SF_SD4
+50120010;Operations UK;Operations UK;;;SF_SD4
+50120000;Leadership Team  UK;Leadership Team  UK;;;SF_SD4
+50120018;Building Management UK;Building Management UK;;;SF_SD4
+50120001;Human Resources UK;Human Resources UK;;;SF_SD4
+50120014;Planning & Scheduling UK;Planning & Scheduling UK;;;SF_SD4
+50120009;Employee Development UK;Employee Development UK;;;SF_SD4
+50120005;Talent Management UK;Talent Management UK;;;SF_SD4
+50120012;Facilities Maintenance UK;Facilities Maintenance UK;;;SF_SD4
+50120003;HR Business Office UK;HR Business Office UK;;;SF_SD4
+50120007;Compensation and Benefits UK;Compensation and Benefits UK;;;SF_SD4
+50120022;Information Technology UK;Information Technology UK;;;SF_SD4
+50120020;Finance UK;Finance UK;;;SF_SD4
+50120021;Sales UK;Sales UK;;;SF_SD4
+50120004;External Workforce UK;External Workforce UK;;;SF_SD4
+50120002;Learning Program Management UK;Learning Program Management UK;;;SF_SD4
+50120011;Production;Production;;;SF_SD4
+50130015;Engineering FR;Engineering FR;;;SF_SD4
+50130006;Talent Acquisition FR;Talent Acquisition FR;;;SF_SD4
+50130010;Operations FR;Operations FR;;;SF_SD4
+50130000;Leadership Team France;Leadership Team France;;;SF_SD4
+50130018;Building Management FR;Building Management FR;;;SF_SD4
+50130003;HR Business Office FR;HR Business Office FR;;;SF_SD4
+50130009;Employee Development Corp;Employee Development Corp;;;SF_SD4
+50130005;Talent Management FR;Talent Management FR;;;SF_SD4
+50130012;Facilities Maintenance FR;Facilities Maintenance FR;;;SF_SD4
+50130007;Compensation and Benefits FR;Compensation and Benefits FR;;;SF_SD4
+50130001;Human Resources FR;Human Resources FR;;;SF_SD4
+50130013;Quality Assurance FR;Quality Assurance FR;;;SF_SD4
+50130021;Sales FR;Sales FR;;;SF_SD4
+50130014;Planning & Scheduling FR;Planning & Scheduling FR;;;SF_SD4
+50130002;Learning Program Management FR;Learning Program Management FR;;;SF_SD4
+50130022;Information Technology FR;Information Technology FR;;;SF_SD4
+50140015;Engineering DE;Engineering DE;;;SF_SD4
+50140006;Talent Acquisition DE;Talent Acquisition DE;;;SF_SD4
+50140010;Operations DE;Operations DE;;;SF_SD4
+50140000;Leadership Team Germany;Leadership Team Germany;;;SF_SD4
+50140018;Building Management DE;Building Management DE;;;SF_SD4
+50140011;Production DE;Production DE;;;SF_SD4
+50140009;Employee Development DE;Employee Development DE;;;SF_SD4
+50140005;Talent Management DE;Talent Management DE;;;SF_SD4
+50140012;Facilities Maintenance DE;Facilities Maintenance DE;;;SF_SD4
+50140003;HR Business Office DE;HR Business Office DE;;;SF_SD4
+50140007;Compensation and Benefits DE;Compensation and Benefits DE;;;SF_SD4
+50140001;Human Resources DE;Human Resources DE;;;SF_SD4
+50140014;Planning & Scheduling DE;Planning & Scheduling DE;;;SF_SD4
+50140013;Quality Assurance DE;Quality Assurance DE;;;SF_SD4
+50140022;Information Technology DE;Information Technology DE;;;SF_SD4
+50140020;Finance DE;Finance DE;;;SF_SD4
+50140021;Sales DE;Sales DE;;;SF_SD4
+50140008;Performance & Development DE;Performance & Development DE;;;SF_SD4
+5000018;Shared Services;Shared Services;;;SF_SD4
+5000017;Operations IN;Operations IN;;;SF_SD4
+50100011;Production CN;Production CN;;;SF_SD4
+5000033;HR Business Office JP;HR Business Office JP;;;SF_SD4
+50150018;Building Management US;Building Management US;;;SF_SD4
+50150015;Engineering US;Engineering US;;;SF_SD4
+50007729;Organizational and Employee Deve;Organizational and Employee Deve;;;SF_SD4
+50110010;Operations AU;Operations AU;;;SF_SD4
+50100015;Engineering CN;Engineering CN;;;SF_SD4
+50110015;Engineering AU;Engineering AU;;;SF_SD4
+50007728;Employee Relations;Employee Relations;;;SF_SD4
+50160009;Employee Development BR;Employee Development BR;;;SF_SD4
+50100006;Talent Acquisition CN;Talent Acquisition CN;;;SF_SD4
+50100003;HR Business Office CN;HR Business Office CN;;;SF_SD4
+5000011;Operations SG;Operations SG;;;SF_SD4
+5000049;Operations TW;Operations TW;;;SF_SD4
+5000036;Operations HK;Operations HK;;;SF_SD4
+50180000;Leadership Team NL;Leadership Team NL;;;SF_SD4
+50180010;Operations NL;Operations NL;;;SF_SD4
+50180001;Human Resources NL;Human Resources NL;;;SF_SD4
+50180003;HR Business Office NL;HR Business Office NL;;;SF_SD4
+50180011;Production NL;Production NL;;;SF_SD4
+50180015;Engineering NL;Engineering NL;;;SF_SD4
+50180014;Planning & Scheduling NL;Planning & Scheduling NL;;;SF_SD4
+93000300;LEADERSHIP TEAM Poland;LEADERSHIP TEAM Poland;;;SF_SD4
+45000001;Human Resources CANADA;Human Resources CANADA;;;SF_SD4
+50170001;Human Resources SAF;Human Resources SAF;;;SF_SD4
+66500300;LEADERSHIP TEAM Saudi Arabia;LEADERSHIP TEAM Saudi Arabia;;;SF_SD4
+67500300;LEADERSHIP TEAM UAE;LEADERSHIP TEAM UAE;;;SF_SD4
+5000132;Development;Development;;;SF_SD4
+5000134;Maintenance;Maintenance;;;SF_SD4
+5000135;Planning & Scheduling;Planning & Scheduling;;;SF_SD4
+5000133;Production;Production;;;SF_SD4
+5000139;Sales;Sales;;;SF_SD4
+5000131;Market Research;Market Research;;;SF_SD4
+50160015;Engineering BR;Engineering BR;;;SF_SD4
+50160006;Talent Acquisition BR;Talent Acquisition BR;;;SF_SD4
+50150010;Operations BR;Operations BR;;;SF_SD4
+50160000;Leadership Team Brazil;Leadership Team Brazil;;;SF_SD4
+50160018;Building Management BR;Building Management BR;;;SF_SD4
+50160010;Operations Brazil;Operations Brazil;;;SF_SD4
+50160005;Talent Management BR;Talent Management BR;;;SF_SD4
+50160012;Facilities Maintenance BR;Facilities Maintenance BR;;;SF_SD4
+50160003;HR Business Office BR;HR Business Office BR;;;SF_SD4
+50160007;Compensation and Benefits BR;Compensation and Benefits BR;;;SF_SD4
+50160001;Human Resources BR;Human Resources BR;;;SF_SD4
+50160014;Planning & Scheduling BR;Planning & Scheduling BR;;;SF_SD4
+50200002;Leadership Team South America;Leadership Team South America;;;SF_SD4
+50160013;Quality Assurance BR;Quality Assurance BR;;;SF_SD4
+50160022;Information Technology BR;Information Technology BR;;;SF_SD4
+50160020;Finance BR;Finance BR;;;SF_SD4
+50160021;Sales BR;Sales BR;;;SF_SD4
+50160002;Learning Program Management BR;Learning Program Management BR;;;SF_SD4
+50160004;External Workforce BR;External Workforce BR;;;SF_SD4
+50150009;Employee Development US;Employee Development US;;;SF_SD4
+50110006;Talent Acquisition AU;Talent Acquisition AU;;;SF_SD4
+50006377;Leadership Team Asia Pacific;Leadership Team Asia Pacific;;;SF_SD4
+50110018;Building Management AU;Building Management AU;;;SF_SD4
+50110000;Leadership Team Australia;Leadership Team Australia;;;SF_SD4
+50110009;Employee Development AU;Employee Development AU;;;SF_SD4
+50110001;Human Resources AU;Human Resources AU;;;SF_SD4
+50110012;Facilities Maintenance AU;Facilities Maintenance AU;;;SF_SD4
+50110003;HR Business Office AU;HR Business Office AU;;;SF_SD4
+50110007;Compensation and Benefits AU;Compensation and Benefits AU;;;SF_SD4
+50110005;Talent Management AU;Talent Management AU;;;SF_SD4
+50110014;Planning & Scheduling AU;Planning & Scheduling AU;;;SF_SD4
+50110022;Information Technology AU;Information Technology AU;;;SF_SD4
+50110020;Finance AU;Finance AU;;;SF_SD4
+50110013;Quality Assurance AU;Quality Assurance AU;;;SF_SD4
+50110002;Learning Program Management AU;Learning Program Management AU;;;SF_SD4
+50100021;Sales CN;Sales CN;;;SF_SD4
+50100012;Facilities Maintenance CN;Facilities Maintenance CN;;;SF_SD4
+50100022;Information Technology CN;Information Technology CN;;;SF_SD4
+50100009;Employee Development CN;Employee Development CN;;;SF_SD4
+50100005;Talent Management CN;Talent Management CN;;;SF_SD4
+50100007;Compensation and Benefits CN;Compensation and Benefits CN;;;SF_SD4
+50100001;Human Resources CN;Human Resources CN;;;SF_SD4
+50100002;Learning Program Management CN;Learning Program Management CN;;;SF_SD4
+50150020;Finance BestRun;Finance BestRun;;;SF_SD4
+50150021;Sales US;Sales US;;;SF_SD4
+50150022;Information Technology US;Information Technology US;;;SF_SD4
+50007727;Chief Learning Office;Chief Learning Office;;;SF_SD4
+50007750;Talent Management Corp;Talent Management Corp;;;SF_SD4
+50007726;Global Human Resources;Global Human Resources;;;SF_SD4
+5000001;Leadership Team Russia;Leadership Team Russia;;;SF_SD4
+5000016;Information Technology RU;Information Technology RU;;;SF_SD4
+5000007;Sales RU;Sales RU;;;SF_SD4
+5000004;Production RU;Production RU;;;SF_SD4
+5000002;Human Resources RU;Human Resources RU;;;SF_SD4
+5000003;Operations RU;Operations RU;;;SF_SD4
+5000009;Facilities Maintenance RU;Facilities Maintenance RU;;;SF_SD4
+5000008;Quality Assurance RU;Quality Assurance RU;;;SF_SD4
+50002593;Quality Management;Quality Management;;;SF_SD4
+45000300;LEADERSHIP TEAM CANADA;LEADERSHIP TEAM CANADA;;;SF_SD4
+50028929;Operations & Maintenance;Operations & Maintenance;;;SF_SD4
+50000595;Human Resources;Human Resources;;;SF_SD4
+45007750;Talent Management Corp CANADA;Talent Management Corp CANADA;;;SF_SD4
+45000006;Talent Acquisition CANADA;Talent Acquisition CANADA;;;SF_SD4
+45007753;Operations CANADA;Operations CANADA;;;SF_SD4
+26007753;Operations ITALY;Operations ITALY;;;SF_SD4
+45000011;Production CANADA;Production CANADA;;;SF_SD4
+26000011;Production ITALY;Production ITALY;;;SF_SD4
+26000001;Human Resources ITALY;Human Resources ITALY;;;SF_SD4
+26000300;LEADERSHIP TEAM ITALY;LEADERSHIP TEAM ITALY;;;SF_SD4
+5000037;Production HK;Production HK;;;SF_SD4
+5000048;Operations & Maintenance HK;Operations & Maintenance HK;;;SF_SD4
+5000039;Facilities Maintenance HK;Facilities Maintenance HK;;;SF_SD4
+5000038;Asset Management HK;Asset Management HK;;;SF_SD4
+50002594;Production Planning;Production Planning;;;SF_SD4
+50002591;Operations & Maintenance CN;Operations & Maintenance CN;;;SF_SD4
+85900300;LEADERSHIP TEAM New Zealand;LEADERSHIP TEAM New Zealand;;;SF_SD4
+85907753;Operations New Zealand;Operations New Zealand;;;SF_SD4
+85900011;Production New Zealand;Production New Zealand;;;SF_SD4
+85900001;Human Resources New Zealand;Human Resources New Zealand;;;SF_SD4
+5000050;Production TW;Production TW;;;SF_SD4
+5000062;Operations & Maintenance TW;Operations & Maintenance TW;;;SF_SD4
+5000052;Facilities Maintenance TW;Facilities Maintenance TW;;;SF_SD4
+67507753;Operations UAE;Operations UAE;;;SF_SD4
+67500011;Production UAE;Production UAE;;;SF_SD4
+67500001;Human Resources UAE;Human Resources UAE;;;SF_SD4
+60000300;LEADERSHIP TEAM MEXICO;LEADERSHIP TEAM MEXICO;;;SF_SD4
+60007753;Operations MEXICO;Operations MEXICO;;;SF_SD4
+60000011;Production MEXICO;Production MEXICO;;;SF_SD4
+60000001;Human Resources MEXICO;Human Resources MEXICO;;;SF_SD4
+93007753;Operations Poland;Operations Poland;;;SF_SD4
+93000011;Production Poland;Production Poland;;;SF_SD4
+93000001;Human Resources Poland;Human Resources Poland;;;SF_SD4
+50002579;Leadership Team China;Leadership Team China;;;SF_SD4
+50100013;Quality Assurance CN;Quality Assurance CN;;;SF_SD4
+66507753;Operations Saudi Arabia;Operations Saudi Arabia;;;SF_SD4
+66500011;Production Saudi Arabia;Production Saudi Arabia;;;SF_SD4
+66500001;Human Resources Saudi Arabia;Human Resources Saudi Arabia;;;SF_SD4
+75000300;LEADERSHIP TEAM Argentina;LEADERSHIP TEAM Argentina;;;SF_SD4
+75007753;Operations Argentina;Operations Argentina;;;SF_SD4
+75000011;Production Argentina;Production Argentina;;;SF_SD4
+75000001;Human Resources Argentina;Human Resources Argentina;;;SF_SD4
+41000300;LEADERSHIP TEAM Korea;LEADERSHIP TEAM Korea;;;SF_SD4
+41007753;Operations Korea;Operations Korea;;;SF_SD4
+41000011;Production Korea;Production Korea;;;SF_SD4
+41000001;Human Resources Korea;Human Resources Korea;;;SF_SD4
+50007725;Global Operations;Global Operations;;;SF_SD4
+50150014;Planning & Scheduling US;Planning & Scheduling US;;;SF_SD4
+50150012;Facilities Maintenance US;Facilities Maintenance US;;;SF_SD4
+1;BestRun Corporation;BestRun Corporation;;;SF_SD4
+50006376;Leadership Team Americas;Leadership Team Americas;;;SF_SD4
+50170300;LEADERSHIP TEAM SAF;LEADERSHIP TEAM SAF;;;SF_SD4
+50177753;Operations South Africa;Operations South Africa;;;SF_SD4
+50170011;Production South Africa;Production South Africa;;;SF_SD4
+50170013;Quality Assurance South Africa;Quality Assurance South Africa;;;SF_SD4
+50170012;Facilities Maintenance SAF;Facilities Maintenance SAF;;;SF_SD4
+50170015;Engineering South Africa;Engineering South Africa;;;SF_SD4
+50170014;Planning & Scheduling SAF;Planning & Scheduling SAF;;;SF_SD4
+50170018;Building Management South Africa;Building Management South Africa;;;SF_SD4
+50177750;Talent Management Corp SAF;Talent Management Corp SAF;;;SF_SD4
+50170006;Talent Acquisition SAF;Talent Acquisition SAF;;;SF_SD4
