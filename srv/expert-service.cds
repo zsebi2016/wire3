@@ -17,5 +17,5 @@ service ExpertService {
 	//exp: association to exp on exp.ID = ID;
 //} 
   
-  entity Test2 @readonly as projection on TEST_VIEW;
+  //entity Test2 @readonly as projection on TEST_VIEW;
 }

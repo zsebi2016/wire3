@@ -472,35 +472,6 @@
       },
       "$syntax": "projection"
     },
-    "ExpertService.Test2": {
-      "kind": "entity",
-      "@Capabilities.DeleteRestrictions.Deletable": false,
-      "@Capabilities.InsertRestrictions.Insertable": false,
-      "@Capabilities.UpdateRestrictions.Updatable": false,
-      "@cds.persistence.name": "EXPERTSERVICE_TEST2",
-      "@readonly": true,
-      "query": {
-        "SELECT": {
-          "from": {
-            "ref": [
-              "TEST_VIEW"
-            ]
-          }
-        }
-      },
-      "elements": {
-        "ID": {
-          "@cds.persistence.name": "ID",
-          "key": true,
-          "type": "cds.Integer"
-        },
-        "TEAM_NAME": {
-          "@cds.persistence.name": "TEAM_NAME",
-          "type": "cds.String"
-        }
-      },
-      "$syntax": "projection"
-    },
     "ExpertService.V_Team": {
       "kind": "entity",
       "@Capabilities.DeleteRestrictions.Deletable": false,

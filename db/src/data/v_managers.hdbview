@@ -1,0 +1,38 @@
+VIEW V_MANAGERS ( 
+	"ID",
+	"REPORTS_TO",
+	"SKILL_SET",
+	"EXT_ID",
+	"NAME",
+	"FIRSTNAME",
+	"LASTNAME",
+	"TITLE",
+	"EMAIL",
+	"DEPARTMENT",
+	"JOBCODE",
+	"DIVISION",
+	"LOCATION",
+	"CITY",
+	"COUNTRY",
+	"SOURCE"
+) 
+AS SELECT 
+	e."ID",
+	e."REPORTS_TO",
+	e."SKILL_SET",
+	e."EXT_ID",
+	e."NAME",
+	e."FIRSTNAME",
+	e."LASTNAME",
+	e."TITLE",
+	e."EMAIL",
+	e."DEPARTMENT",
+	e."JOBCODE",
+	e."DIVISION",
+	e."LOCATION",
+	e."CITY",
+	e."COUNTRY",
+	e."SOURCE"
+FROM EXPERT e, X_MAN_IDS m  
+WHERE e.ID = m.MAN_ID
+ORDER BY e.LASTNAME
