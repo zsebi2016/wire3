@@ -472,6 +472,108 @@
       },
       "$syntax": "projection"
     },
+    "ExpertService.V_Expert": {
+      "kind": "entity",
+      "@Capabilities.DeleteRestrictions.Deletable": false,
+      "@Capabilities.InsertRestrictions.Insertable": false,
+      "@Capabilities.UpdateRestrictions.Updatable": false,
+      "@cds.persistence.name": "EXPERTSERVICE_V_EXPERT",
+      "@readonly": true,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "V_EXPERT"
+            ]
+          }
+        }
+      },
+      "elements": {
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "REPORTS_TO": {
+          "@cds.persistence.name": "REPORTS_TO",
+          "type": "cds.Integer"
+        },
+        "SKILL_SET": {
+          "@cds.persistence.name": "SKILL_SET",
+          "type": "cds.String"
+        },
+        "EXT_ID": {
+          "@cds.persistence.name": "EXT_ID",
+          "type": "cds.String",
+          "length": 100
+        },
+        "NAME": {
+          "@cds.persistence.name": "NAME",
+          "type": "cds.String",
+          "length": 100
+        },
+        "FIRSTNAME": {
+          "@cds.persistence.name": "FIRSTNAME",
+          "type": "cds.String",
+          "length": 100
+        },
+        "LASTNAME": {
+          "@cds.persistence.name": "LASTNAME",
+          "type": "cds.String",
+          "length": 100
+        },
+        "TITLE": {
+          "@cds.persistence.name": "TITLE",
+          "type": "cds.String",
+          "length": 100
+        },
+        "EMAIL": {
+          "@cds.persistence.name": "EMAIL",
+          "type": "cds.String",
+          "length": 100
+        },
+        "DEPARTMENT": {
+          "@cds.persistence.name": "DEPARTMENT",
+          "type": "cds.String",
+          "length": 100
+        },
+        "JOBCODE": {
+          "@cds.persistence.name": "JOBCODE",
+          "type": "cds.String",
+          "length": 100
+        },
+        "DIVISION": {
+          "@cds.persistence.name": "DIVISION",
+          "type": "cds.String",
+          "length": 100
+        },
+        "LOCATION": {
+          "@cds.persistence.name": "LOCATION",
+          "type": "cds.String",
+          "length": 100
+        },
+        "CITY": {
+          "@cds.persistence.name": "CITY",
+          "type": "cds.String",
+          "length": 100
+        },
+        "COUNTRY": {
+          "@cds.persistence.name": "COUNTRY",
+          "type": "cds.String",
+          "length": 100
+        },
+        "SOURCE": {
+          "@cds.persistence.name": "SOURCE",
+          "type": "cds.String",
+          "length": 10
+        },
+        "LANGUAGE": {
+          "@cds.persistence.name": "LANGUAGE",
+          "type": "cds.String"
+        }
+      },
+      "$syntax": "projection"
+    },
     "ExpertService.V_Team": {
       "kind": "entity",
       "@Capabilities.DeleteRestrictions.Deletable": false,
@@ -625,18 +727,91 @@
         }
       }
     },
-    "TEST_VIEW": {
+    "V_EXPERT": {
       "kind": "entity",
       "@cds.persistence.exists": true,
-      "@cds.persistence.name": "TEST_VIEW",
+      "@cds.persistence.name": "V_EXPERT",
       "elements": {
         "ID": {
           "@cds.persistence.name": "ID",
           "key": true,
           "type": "cds.Integer"
         },
-        "TEAM_NAME": {
-          "@cds.persistence.name": "TEAM_NAME",
+        "REPORTS_TO": {
+          "@cds.persistence.name": "REPORTS_TO",
+          "type": "cds.Integer"
+        },
+        "SKILL_SET": {
+          "@cds.persistence.name": "SKILL_SET",
+          "type": "cds.String"
+        },
+        "EXT_ID": {
+          "@cds.persistence.name": "EXT_ID",
+          "type": "cds.String",
+          "length": 100
+        },
+        "NAME": {
+          "@cds.persistence.name": "NAME",
+          "type": "cds.String",
+          "length": 100
+        },
+        "FIRSTNAME": {
+          "@cds.persistence.name": "FIRSTNAME",
+          "type": "cds.String",
+          "length": 100
+        },
+        "LASTNAME": {
+          "@cds.persistence.name": "LASTNAME",
+          "type": "cds.String",
+          "length": 100
+        },
+        "TITLE": {
+          "@cds.persistence.name": "TITLE",
+          "type": "cds.String",
+          "length": 100
+        },
+        "EMAIL": {
+          "@cds.persistence.name": "EMAIL",
+          "type": "cds.String",
+          "length": 100
+        },
+        "DEPARTMENT": {
+          "@cds.persistence.name": "DEPARTMENT",
+          "type": "cds.String",
+          "length": 100
+        },
+        "JOBCODE": {
+          "@cds.persistence.name": "JOBCODE",
+          "type": "cds.String",
+          "length": 100
+        },
+        "DIVISION": {
+          "@cds.persistence.name": "DIVISION",
+          "type": "cds.String",
+          "length": 100
+        },
+        "LOCATION": {
+          "@cds.persistence.name": "LOCATION",
+          "type": "cds.String",
+          "length": 100
+        },
+        "CITY": {
+          "@cds.persistence.name": "CITY",
+          "type": "cds.String",
+          "length": 100
+        },
+        "COUNTRY": {
+          "@cds.persistence.name": "COUNTRY",
+          "type": "cds.String",
+          "length": 100
+        },
+        "SOURCE": {
+          "@cds.persistence.name": "SOURCE",
+          "type": "cds.String",
+          "length": 10
+        },
+        "LANGUAGE": {
+          "@cds.persistence.name": "LANGUAGE",
           "type": "cds.String"
         }
       }

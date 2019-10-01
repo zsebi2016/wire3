@@ -71,10 +71,31 @@ entity V_TEAM {
 }
 
 @cds.persistence.exists
+Entity V_EXPERT {
+	key ID : Integer;
+	REPORTS_TO : Integer;
+	SKILL_SET: String;
+	EXT_ID : String(100);
+	NAME : String (100);
+	FIRSTNAME : String(100);
+	LASTNAME : String(100);
+	TITLE : String(100);
+	EMAIL : String(100);
+	DEPARTMENT : String(100);
+	JOBCODE : String(100);
+	DIVISION : String(100);
+	LOCATION : String(100);
+	CITY : String(100);
+	COUNTRY : String(100);
+	SOURCE : String(10);
+	LANGUAGE : String;
+}
+
+/*@cds.persistence.exists
 entity TEST_VIEW {
   key ID : Integer;
   TEAM_NAME : String;
-}
+}*/
 
 /*@cds.persistence.exists
 *Entity "EXPERTPLUS" {

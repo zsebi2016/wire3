@@ -1,0 +1,46 @@
+VIEW V_EXPERT ( 
+	"ID",
+	"REPORTS_TO",
+	"SKILL_SET",
+	"EXT_ID",
+	"NAME",
+	"FIRSTNAME",
+	"LASTNAME",
+	"TITLE",
+	"EMAIL",
+	"DEPARTMENT",
+	"JOBCODE",
+	"DIVISION",
+	"LOCATION",
+	"CITY",
+	"COUNTRY",
+	"SOURCE",
+	"LANGUAGE"
+) 
+AS SELECT 
+	e."ID",
+	e."REPORTS_TO",
+	e."SKILL_SET",
+	e."EXT_ID",
+	e."NAME",
+	e."FIRSTNAME",
+	e."LASTNAME",
+	e."TITLE",
+	e."EMAIL",
+	e."DEPARTMENT",
+	e."JOBCODE",
+	e."DIVISION",
+	e."LOCATION",
+	e."CITY",
+	e."COUNTRY",
+	e."SOURCE",
+	CASE COUNTRY  
+         WHEN 'Germany' THEN 'EN,DE'  
+         WHEN 'Canada' THEN 'EN,FR'  
+         WHEN 'Fance' THEN 'EN,FR'  
+         WHEN 'China' THEN 'EN,ZH'
+         WHEN 'Italy' THEN 'EN,IT,DE'
+         WHEN 'Russian FEderation' THEN 'EN,RU'
+         ELSE 'EN'  
+    END as "LANGUAGE"
+FROM EXPERT e  

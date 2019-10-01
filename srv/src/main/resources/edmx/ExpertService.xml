@@ -10,6 +10,7 @@
         <EntitySet Name="ExpertExtra" EntityType="ExpertService.ExpertExtra"/>
         <EntitySet Name="Expert_team" EntityType="ExpertService.Expert_team"/>
         <EntitySet Name="Team_member" EntityType="ExpertService.Team_member"/>
+        <EntitySet Name="V_Expert" EntityType="ExpertService.V_Expert"/>
         <EntitySet Name="V_Team" EntityType="ExpertService.V_Team"/>
         <AssociationSet Name="Expert_team_EXPERTS" Association="ExpertService.Expert_team_EXPERTS">
           <End Role="Expert_team" EntitySet="Expert_team"/>
@@ -82,6 +83,28 @@
         <NavigationProperty Name="TEAM" Relationship="ExpertService.Team_member_TEAM" FromRole="Team_member" ToRole="Expert_team"/>
         <Property Name="EXPERT_ID" Type="Edm.Int32"/>
         <Property Name="TEAM_ID" Type="Edm.Int32"/>
+      </EntityType>
+      <EntityType Name="V_Expert">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="REPORTS_TO" Type="Edm.Int32"/>
+        <Property Name="SKILL_SET" Type="Edm.String"/>
+        <Property Name="EXT_ID" Type="Edm.String" MaxLength="100"/>
+        <Property Name="NAME" Type="Edm.String" MaxLength="100"/>
+        <Property Name="FIRSTNAME" Type="Edm.String" MaxLength="100"/>
+        <Property Name="LASTNAME" Type="Edm.String" MaxLength="100"/>
+        <Property Name="TITLE" Type="Edm.String" MaxLength="100"/>
+        <Property Name="EMAIL" Type="Edm.String" MaxLength="100"/>
+        <Property Name="DEPARTMENT" Type="Edm.String" MaxLength="100"/>
+        <Property Name="JOBCODE" Type="Edm.String" MaxLength="100"/>
+        <Property Name="DIVISION" Type="Edm.String" MaxLength="100"/>
+        <Property Name="LOCATION" Type="Edm.String" MaxLength="100"/>
+        <Property Name="CITY" Type="Edm.String" MaxLength="100"/>
+        <Property Name="COUNTRY" Type="Edm.String" MaxLength="100"/>
+        <Property Name="SOURCE" Type="Edm.String" MaxLength="10"/>
+        <Property Name="LANGUAGE" Type="Edm.String"/>
       </EntityType>
       <EntityType Name="V_Team">
         <Key>
@@ -178,6 +201,23 @@
         </Annotation>
       </Annotations>
       <Annotations Target="ExpertService.EntityContainer/Team_member" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+        <Annotation Term="Capabilities.DeleteRestrictions">
+          <Record Type="Capabilities.DeleteRestrictionsType">
+            <PropertyValue Property="Deletable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.InsertRestrictions">
+          <Record Type="Capabilities.InsertRestrictionsType">
+            <PropertyValue Property="Insertable" Bool="false"/>
+          </Record>
+        </Annotation>
+        <Annotation Term="Capabilities.UpdateRestrictions">
+          <Record Type="Capabilities.UpdateRestrictionsType">
+            <PropertyValue Property="Updatable" Bool="false"/>
+          </Record>
+        </Annotation>
+      </Annotations>
+      <Annotations Target="ExpertService.EntityContainer/V_Expert" xmlns="http://docs.oasis-open.org/odata/ns/edm">
         <Annotation Term="Capabilities.DeleteRestrictions">
           <Record Type="Capabilities.DeleteRestrictionsType">
             <PropertyValue Property="Deletable" Bool="false"/>
