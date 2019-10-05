@@ -1,0 +1,23 @@
+VIEW X_PARTE_2 (
+	EXP_LEVEL,
+	EXPERT_ID,
+	EXP_NAME,
+	TEAM_ID,
+	TEAM_NAME,
+	TEAM_LEAD,
+	PARENT_TEAM,
+	PTEAM
+) 
+as
+select x.exp_level, x.EXPERT_id, x.EXP_name, x.team_id, x.team_name, x.team_lead, x.parent_team , y.PTEAM
+from X_PARTE_1 x, 
+(select EXPERT_ID, TEAM_ID as PTEAM
+from X_PARTE_1 
+where PARENT_TEAM > (-1)
+group by EXPERT_ID, TEAM_ID
+order by EXPERT_ID, TEAM_ID
+) as y 
+where x.EXPERT_ID = y.EXPERT_ID
+and X.EXPERT_ID = X.TEAM_LEAD
+and PARENT_TEAM = -1
+order by EXP_LEVEL, EXPERT_ID

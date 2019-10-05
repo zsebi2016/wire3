@@ -1,0 +1,15 @@
+VIEW X_PARTE_1 (
+	EXP_LEVEL,
+	EXPERT_ID,
+	EXP_NAME,
+	TEAM_ID,
+	TEAM_NAME,
+	TEAM_LEAD,
+	PARENT_TEAM
+) 
+as
+select e.level, e.id, e.name, m.team_id, t.team_name, team_lead, parent_team 
+from  V_EXPERT_HI_SF e, TEAM_MEMBER m, EXPERT_TEAM t 
+where e.id = m.EXPERT_ID
+and m.TEAM_ID = t.ID
+order by level, e.id
