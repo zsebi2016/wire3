@@ -1,0 +1,20 @@
+VIEW X_SFTU ( 
+	"TEAM_ID",
+	"EXPERT_ID",
+	"LEVEL",
+	"TEAM_LEAD",
+	"PARENT_TEAM",
+	"NAME"
+) 
+as
+select 
+m.TEAM_ID, 
+m.EXPERT_ID, 
+e.LEVEL, 
+T.TEAM_LEAD, 
+T.PARENT_TEAM, 
+e.NAME 
+from V_EXPERT_HI_SF e, TEAM_MEMBER m, EXPERT_TEAM T
+where e.ID = m.EXPERT_ID
+and t.ID = m.TEAM_ID
+order by team_id, level

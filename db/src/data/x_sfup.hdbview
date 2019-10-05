@@ -1,0 +1,15 @@
+VIEW X_SFUP ( 
+	"TEAM_ID",
+	"LEVEL",
+	"EXPERT_ID"
+) 
+as
+SELECT t.TEAM_ID, t.LEVEL, MIN(t.EXPERT_ID) from x_sftu as t, 
+(select TEAM_ID, MIN(LEVEL) as MINLEVEL 
+from x_sftu
+group by TEAM_ID
+order by TEAM_ID) as m
+where t.team_id = m.TEAM_ID
+and t.LEVEL = m.MINLEVEL
+group by t.TEAM_ID, T.LEVEL
+order by t.TEAM_ID
