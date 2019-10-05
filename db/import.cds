@@ -67,6 +67,7 @@ entity V_TEAM {
   DESCRIPTION : String;
   TEAM_LEAD : Integer;
   PARENT_TEAM : Integer;
+  SOURCE : String;
   EXPERTS : association to many EXPERT_WITH_TEAM on ID = EXPERTS.TEAM_ID;
 }
 

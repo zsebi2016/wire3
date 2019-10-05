@@ -1,0 +1,35 @@
+VIEW V_TEAM_HI_SF ( 
+	RANK,  
+    TREE_SIZE,
+    PARENT_RANK,
+    LEVEL,
+	"ID",
+	"TEAM_NAME",
+	"DESCRIPTION",
+	"TEAM_LEAD",
+	"PARENT_TEAM",
+	"SOURCE"
+) 
+AS SELECT hierarchy_rank AS rank,  
+    hierarchy_tree_size AS tree_size,
+    hierarchy_parent_rank AS parent_rank,
+    hierarchy_level AS level,
+	"ID",
+	"TEAM_NAME",
+	"DESCRIPTION",
+	"TEAM_LEAD",
+	"PARENT_TEAM",
+	"SOURCE"
+ FROM HIERARCHY ( SOURCE ( SELECT ID AS node_id, PARENT_TEAM AS parent_id, 
+    "ID",
+	"TEAM_NAME",
+	"DESCRIPTION",
+	"TEAM_LEAD",
+	"PARENT_TEAM",
+	"SOURCE"
+ FROM V_TEAM 
+ where source = 'SF_SD4' )
+                  START WHERE id = '1'
+                  ORPHAN IGNORE )
+ WHERE hierarchy_level > 0
+ ORDER BY level, rank;

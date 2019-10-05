@@ -612,6 +612,10 @@
           "@cds.persistence.name": "PARENT_TEAM",
           "type": "cds.Integer"
         },
+        "SOURCE": {
+          "@cds.persistence.name": "SOURCE",
+          "type": "cds.String"
+        },
         "EXPERTS": {
           "@cds.persistence.name": "EXPERTS",
           "type": "cds.Association",
@@ -841,6 +845,10 @@
         "PARENT_TEAM": {
           "@cds.persistence.name": "PARENT_TEAM",
           "type": "cds.Integer"
+        },
+        "SOURCE": {
+          "@cds.persistence.name": "SOURCE",
+          "type": "cds.String"
         },
         "EXPERTS": {
           "@cds.persistence.name": "EXPERTS",

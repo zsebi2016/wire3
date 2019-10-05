@@ -115,6 +115,7 @@
         <Property Name="DESCRIPTION" Type="Edm.String"/>
         <Property Name="TEAM_LEAD" Type="Edm.Int32"/>
         <Property Name="PARENT_TEAM" Type="Edm.Int32"/>
+        <Property Name="SOURCE" Type="Edm.String"/>
         <NavigationProperty Name="EXPERTS" Relationship="ExpertService.V_Team_EXPERTS" FromRole="V_Team" ToRole="ExpertExtra"/>
       </EntityType>
       <Association Name="Expert_team_EXPERTS">
